@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="1024" height="1024">
+  <title>Ask Yourself — Porsa app icon</title>
+  <rect width="120" height="120" rx="27" fill="#3B1E4F"/>
+  <g transform="translate(17 19) scale(0.72)">
+    <path d="M58 16 C56 7 63 2 69 4 C74 6 74 12 69 13" fill="none" stroke="#FF9A4D" stroke-width="5" stroke-linecap="round"/>
+    <path d="M60 14 C86 14 102 32 102 56 C102 80 86 96 60 96 C54 96 48 95 43 93 L26 104 L31 86 C22 79 18 68 18 56 C18 32 34 14 60 14 Z" fill="#FF9A4D"/>
+    <ellipse cx="47" cy="52" rx="5.5" ry="7.5" fill="#3B1E4F"/>
+    <ellipse cx="73" cy="52" rx="5.5" ry="7.5" fill="#3B1E4F"/>
+    <path d="M50 68 Q60 77 70 68" fill="none" stroke="#3B1E4F" stroke-width="4.5" stroke-linecap="round"/>
+  </g>
+</svg>

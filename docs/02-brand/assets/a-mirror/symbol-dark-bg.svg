@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="1024" height="1024">
+  <title>Ask Yourself — Mirror symbol (for dark backgrounds)</title>
+  <g fill="none" stroke="#FF6B7D" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M60 42 A17 17 0 0 1 94 42 C94 56 60 56 60 72 L60 78"/>
+    <path d="M60 42 A17 17 0 0 0 26 42 C26 56 60 56 60 72 L60 78"/>
+  </g>
+  <circle cx="60" cy="98" r="8" fill="#FF6B7D"/>
+</svg>

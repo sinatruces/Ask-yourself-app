@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="1024" height="1024">
+  <title>Ask Yourself — Dot symbol (for dark backgrounds)</title>
+  <g fill="#F8F7F2" stroke="#F8F7F2" stroke-width="2.5" stroke-linejoin="round">
+    <path d="M48.4 76.4 L56.4 84.4 L48.4 92.4 L40.4 84.4 Z"/>
+    <path d="M37.8 65.8 L45.8 73.8 L37.8 81.8 L29.8 73.8 Z"/>
+    <path d="M27.2 55.2 L35.2 63.2 L27.2 71.2 L19.2 63.2 Z"/>
+    <path d="M59.5 64.2 L67.5 72.2 L59.5 80.2 L51.5 72.2 Z"/>
+    <path d="M70.6 52 L78.6 60 L70.6 68 L62.6 60 Z"/>
+    <path d="M81.7 39.8 L89.7 47.8 L81.7 55.8 L73.7 47.8 Z"/>
+  </g>
+  <path d="M92.8 27.6 L100.8 35.6 L92.8 43.6 L84.8 35.6 Z" fill="#FFB733" stroke="#FFB733" stroke-width="2.5" stroke-linejoin="round"/>
+</svg>
