@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="02-brand/logo/svg/on-dark/lockup-fa-horizontal.svg">
+    <img src="02-brand/logo/svg/color/lockup-fa-horizontal.svg" alt="دیدیت" width="260">
+  </picture>
+</p>
+
 # نقشه‌ی راه محصول
 
 روند کار محصول‌محوره: اول می‌فهمیم چی بسازیم و برای کی، بعد طراحی و تست می‌کنیم، و فقط بعد از اون کد می‌نویسیم.
@@ -7,6 +14,8 @@
 - **Claude:** پیش‌نویس اسناد، تحقیق، تحلیل، وایرفریم و پروتوتایپ HTML، و تقریباً همه‌ی کد
 
 **وضعیت‌ها:** ⬜ شروع نشده · 🟡 در حال انجام · ✅ تمام‌شده
+
+**همه‌ی اسناد با هویت بصری:** [مجموعه‌ی اسناد دیدیت](https://claude.ai/artifact/F2sPDzLa4rNtELc2TcVoNi)
 
 ---
 
@@ -20,7 +29,7 @@
 
 **خروجی:** [استراتژی محصول نسخه‌ی ۱.۰](01-strategy/product-strategy.md) · [صفحه‌ی اشتراکی](https://claude.ai/artifact/6JyCzwp5pP84ZGhKE1CDU5)
 
-## مرحله‌ی ۲: هویت بصری 🟡
+## مرحله‌ی ۲: هویت بصری ✅
 
 هویت بصری قبل از هر خروجی طراحی‌شده‌ی دیگه لازمه تا اسناد، پروتوتایپ و اپ از اول با یک زبان بصری ساخته بشن (D-014).
 
@@ -30,7 +39,8 @@
 - طراحی لوگو (طراح محصول) ✅
 - پالت از رنگ‌های لوگو، توکن‌ها و راهنمای هویت بصری (Claude) ✅
 - نسخه‌های ترکیبی، تک‌رنگ و زمینه‌ی تیره، و فایل‌های آیکون اپ (Claude، D-031) ✅
-- بازنشر صفحه‌ی استراتژی با هویت جدید
+- بازنشر صفحه‌ی استراتژی با هویت جدید ✅
+- همه‌ی اسناد با هویت بصری و لوگو، و مجموعه‌ی اسناد برندشده (D-033) ✅
 
 **خروجی:** [پلتفرم برند](02-brand/brand-platform.md) · [راهنمای هویت بصری](02-brand/visual-identity.md) · [پالت](02-brand/palette.md) · [توکن‌ها](02-brand/tokens.json) · [لوگو](02-brand/logo/svg/) · [آیکون‌های اپ](02-brand/app-icons/) · [مشخصات فنی لوگو](02-brand/logo-spec.md) · [صفحه‌ی اشتراکی راهنما](https://claude.ai/artifact/XXBDLh77GewD7nCdh1o24y) · [بایگانی مسیرهای رد شده](02-brand/archive/v1-visual-directions.md)
 

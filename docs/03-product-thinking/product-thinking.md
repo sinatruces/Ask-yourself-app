@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="../02-brand/logo/svg/on-dark/lockup-fa-horizontal.svg">
+    <img src="../02-brand/logo/svg/color/lockup-fa-horizontal.svg" alt="دیدیت" width="260">
+  </picture>
+</p>
+
 # تفکر محصول
 
 **نسخه:** ۰.۲ (سؤال‌های باز بسته شدن؛ منتظر بازبینی کلی) · **مرحله:** ۳ از ۱۳

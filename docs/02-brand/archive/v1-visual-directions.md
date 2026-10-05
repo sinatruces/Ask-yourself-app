@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="../logo/svg/on-dark/lockup-fa-horizontal.svg">
+    <img src="../logo/svg/color/lockup-fa-horizontal.svg" alt="دیدیت" width="260">
+  </picture>
+</p>
+
 # مسیرهای بصری (نسخه‌ی ۱، بایگانی‌شده)
 
 > **وضعیت: رد شده (D-019).** طراح محصول لوگوها رو نپسندید و لوگو و پالت رو خودش طراحی می‌کنه. این سند فقط برای سابقه نگه داشته شده و نباید مبنای طراحی قرار بگیره. [پلتفرم برند](../brand-platform.md) همچنان معتبره.

@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="logo/svg/on-dark/lockup-fa-horizontal.svg">
+    <img src="logo/svg/color/lockup-fa-horizontal.svg" alt="دیدیت" width="260">
+  </picture>
+</p>
+
 # پلتفرم برند
 
 **نسخه:** ۱.۱ · **مرحله:** ۲ از ۱۳ (هویت بصری)
