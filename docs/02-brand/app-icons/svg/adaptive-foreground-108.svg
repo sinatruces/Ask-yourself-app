@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="108" height="108" shape-rendering="crispEdges">
+  <title>Android adaptive icon foreground (108dp canvas, 66dp safe zone)</title>
+  <path fill="#061720" d="M69 34h6v3h-6zM66 37h3v3h-3zM75 37h3v3h-3zM63 40h3v3h-3zM78 40h3v3h-3zM33 43h6v3h-6zM60 43h3v3h-3zM75 43h6v3h-6zM30 46h3v3h-3zM39 46h3v3h-3zM57 46h3v3h-3zM72 46h6v3h-6zM27 49h3v3h-3zM42 49h3v3h-3zM54 49h3v3h-3zM69 49h6v3h-6zM27 52h6v3h-6zM45 52h3v3h-3zM51 52h3v3h-3zM66 52h6v3h-6zM30 55h6v3h-6zM48 55h3v3h-3zM63 55h6v3h-6zM33 58h6v3h-6zM60 58h6v3h-6zM36 61h6v3h-6zM57 61h6v3h-6zM39 64h6v3h-6zM54 64h6v3h-6zM42 67h15v3h-15zM45 70h9v3h-9z"/>
+  <path fill="#DFF8CF" d="M69 37h6v3h-6zM66 40h3v3h-3zM75 40h3v3h-3zM63 43h3v3h-3zM33 46h6v3h-6zM60 46h3v3h-3zM30 49h3v3h-3zM39 49h3v3h-3zM57 49h3v3h-3zM42 52h3v3h-3zM54 52h3v3h-3zM45 55h3v3h-3zM51 55h3v3h-3zM48 58h3v3h-3z"/>
+  <path fill="#85C06C" d="M69 40h6v3h-6zM66 43h9v3h-9zM63 46h9v3h-9zM33 49h6v3h-6zM60 49h9v3h-9zM33 52h9v3h-9zM57 52h9v3h-9zM36 55h9v3h-9zM54 55h9v3h-9zM39 58h9v3h-9zM51 58h9v3h-9zM42 61h15v3h-15zM45 64h9v3h-9z"/>
+</svg>

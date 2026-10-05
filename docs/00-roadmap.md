@@ -28,11 +28,11 @@
 - ~~سه مسیر بصری~~: رد شد؛ لوگو و پالت با طراح محصوله (D-019)
 - مشخصات فنی لوگو و آیکون ✅
 - طراحی لوگو (طراح محصول) ✅
-- پالت از رنگ‌های لوگو، توکن‌ها و راهنمای هویت بصری (Claude) ✅ (منتظر تأیید)
-- نسخه‌های باقی‌مونده‌ی لوگو و فایل‌های آیکون اپ (طراح محصول)
+- پالت از رنگ‌های لوگو، توکن‌ها و راهنمای هویت بصری (Claude) ✅
+- نسخه‌های ترکیبی، تک‌رنگ و زمینه‌ی تیره، و فایل‌های آیکون اپ (Claude، D-031) ✅
 - بازنشر صفحه‌ی استراتژی با هویت جدید
 
-**خروجی:** [پلتفرم برند](02-brand/brand-platform.md) · [راهنمای هویت بصری](02-brand/visual-identity.md) · [پالت](02-brand/palette.md) · [توکن‌ها](02-brand/tokens.json) · [لوگو](02-brand/logo/) · [مشخصات فنی لوگو](02-brand/logo-spec.md) · [صفحه‌ی اشتراکی راهنما](https://claude.ai/artifact/XXBDLh77GewD7nCdh1o24y) · [بایگانی مسیرهای رد شده](02-brand/archive/v1-visual-directions.md)
+**خروجی:** [پلتفرم برند](02-brand/brand-platform.md) · [راهنمای هویت بصری](02-brand/visual-identity.md) · [پالت](02-brand/palette.md) · [توکن‌ها](02-brand/tokens.json) · [لوگو](02-brand/logo/svg/) · [آیکون‌های اپ](02-brand/app-icons/) · [مشخصات فنی لوگو](02-brand/logo-spec.md) · [صفحه‌ی اشتراکی راهنما](https://claude.ai/artifact/XXBDLh77GewD7nCdh1o24y) · [بایگانی مسیرهای رد شده](02-brand/archive/v1-visual-directions.md)
 
 ## مرحله‌ی ۳: تفکر محصول 🟡
 
