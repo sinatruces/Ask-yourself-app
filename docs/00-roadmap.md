@@ -18,7 +18,7 @@
 - مدل درآمد: چه چیزی رایگانه و چه چیزی اشتراکی
 - متریک‌ها: شاخص اصلی (North Star Metric) و متریک‌های پشتیبان
 
-**خروجی:** [استراتژی محصول نسخه‌ی ۱.۰](01-strategy/product-strategy.md)
+**خروجی:** [استراتژی محصول نسخه‌ی ۱.۰](01-strategy/product-strategy.md) · [صفحه‌ی اشتراکی](https://claude.ai/artifact/6JyCzwp5pP84ZGhKE1CDU5)
 
 ## مرحله‌ی ۲: تفکر محصول 🟡
 
