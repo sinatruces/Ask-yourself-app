@@ -117,3 +117,6 @@ a { color: var(--yes-text); text-underline-offset: 3px; }
 .card span { font-size: 0.86rem; color: var(--text-muted); }
 .card small { font-size: 0.74rem; font-weight: 800; color: var(--yes-text); }
 @media (max-width: 40rem) { .cards { grid-template-columns: 1fr; } }
+
+/* images in documents: pixel art stays crisp */
+.doc img { max-width: 100%; height: auto; image-rendering: pixelated; }
