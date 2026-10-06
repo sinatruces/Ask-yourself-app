@@ -39,10 +39,10 @@ PAGES = [
     ("palette", "docs/02-brand/palette.md", "برند", "رنگ‌های برند، طیف‌ها، توکن‌های تم و گزارش کنتراست"),
     ("logo-spec", "docs/02-brand/logo-spec.md", "برند", "الزامات فنی لوگو و آیکون برای اندروید، iOS و فروشگاه‌ها"),
     ("product-thinking", "docs/03-product-thinking/product-thinking.md", "محصول", "JTBD، حلقه‌ی اصلی، قوانین محصول و دامنه‌ی MVP"),
-    ("literature", "docs/04-research/literature-review.md", "تحقیق", "علم عادت‌سازی، اثر سؤال-رفتار، زنجیره و بازی‌وارگی، با منبع"),
-    ("market", "docs/04-research/market.md", "تحقیق", "بازار اپ ایران، فروشگاه‌ها، پرداخت، نوتیفیکیشن و رفتار کاربران"),
-    ("survey", "docs/04-research/survey.md", "تحقیق", "پرسشنامه‌ی آنلاین کوتاه برای سنجش فرضیه‌ها"),
-    ("interview-guide", "docs/04-research/interview-guide.md", "تحقیق", "راهنمای مصاحبه‌ی نیمه‌ساختاریافته به روش JTBD"),
+    ("research-plan", "docs/04-research/research-plan.md", "تحقیق", "سؤال‌های تحقیق، روش‌ها، محدودیت‌ها و معیارهای تصمیم"),
+    ("desk-research", "docs/04-research/desk-research.md", "تحقیق", "علم عادت، زنجیره، گیمیفیکیشن و بنچمارک‌ها، با منبع"),
+    ("market-iran", "docs/04-research/market-iran.md", "تحقیق", "کاربران، گوشی‌ها، فروشگاه‌ها، پرداخت و شرایط اینترنت ایران"),
+    ("survey", "docs/04-research/survey.md", "تحقیق", "پرسشنامه‌ی آماده برای پرسلاین و برنامه‌ی تحلیل"),
 ]
 EXTERNAL = {"docs/02-brand/visual-identity.md": IDENTITY_URL}
 GROUPS = ["پایه", "استراتژی", "برند", "محصول", "تحقیق"]
