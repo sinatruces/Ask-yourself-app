@@ -241,6 +241,14 @@ def hub_html(cards):
 """
 
 
+def copy_images(body, src_path, out):
+    """Copy images a page references by relative path, so the published page can load them."""
+    for ref in re.findall(r'<img [^>]*src="([^":]+)"', body):
+        target = out / ref
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy(src_path.parent / ref, target)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default=str(ROOT / "build/docs-site"))
@@ -254,6 +262,7 @@ def main():
     for slug, src, group, desc in PAGES:
         title, meta, body = render(src, page_of)
         (out / f"{slug}.html").write_text(page_html(slug, title, group, meta, body, src, "index.html"), encoding="utf-8")
+        copy_images(body, ROOT / src, out)
         version = re.search(r"نسخه:</strong>\s*([^<·]+)", meta)
         cards.append((f"{slug}.html", title, group, desc, ("نسخه‌ی " + version.group(1).strip()) if version else ""))
     cards.insert(5, (IDENTITY_URL, "راهنمای هویت بصری", "برند", "لوگو، رنگ، تایپوگرافی، سیستم پیکسلی، آیکون و حرکت", "صفحه‌ی تعاملی جدا"))
