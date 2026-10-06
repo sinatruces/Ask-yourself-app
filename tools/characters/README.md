@@ -7,6 +7,7 @@
 | `sprites.py` | تعریف پیکسلی قالب بدن مشترک ۳۲×۳۲، شش کرکتر، سه وسیله و انیمیشن‌ها |
 | `render.py` | خروجی PNG (شیت هر انیمیشن، نمای کلی روشن و تیره) و `frames.json` |
 | `preview.tpl.html` + `build_preview.py` | صفحه‌ی پیش‌نمایش تعاملی: ایده‌ی صفحه‌ی اصلی و کلکسیون |
+| `extract_sheet.py` | جدا کردن کرکترهای یک فایل EPS، AI یا PDF به PNG و SVG جدا (نیاز به Ghostscript و poppler) |
 
 ```bash
 python3 tools/characters/render.py build/characters

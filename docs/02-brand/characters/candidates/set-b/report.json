@@ -1,0 +1,361 @@
+{
+  "source": "cute-pixel-art-characters-retro-game-2776485545.ai",
+  "background": "#CECECE",
+  "art_pixel_pt": 24.0,
+  "canvas": 16,
+  "palette": [
+    "#140C1C",
+    "#DEEED6",
+    "#6DC2CA",
+    "#D27D2C",
+    "#757161",
+    "#D04648",
+    "#D2AA99",
+    "#DAD45E",
+    "#8595A1",
+    "#6DAA2C",
+    "#4E4A4E",
+    "#597DCE",
+    "#346524",
+    "#854C30",
+    "#30346D"
+  ],
+  "characters": [
+    {
+      "file": "b-01",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-02",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-03",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-04",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-05",
+      "grid": [
+        15,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-06",
+      "grid": [
+        14,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-07",
+      "grid": [
+        14,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-08",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-09",
+      "grid": [
+        14,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-10",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-11",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-12",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-13",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-14",
+      "grid": [
+        14,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-15",
+      "grid": [
+        14,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-16",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-17",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-18",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-19",
+      "grid": [
+        14,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-20",
+      "grid": [
+        14,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-21",
+      "grid": [
+        15,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-22",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-23",
+      "grid": [
+        16,
+        13
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-24",
+      "grid": [
+        15,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-25",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-26",
+      "grid": [
+        15,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-27",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-28",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-29",
+      "grid": [
+        13,
+        14
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-30",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-31",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-32",
+      "grid": [
+        15,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-33",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-34",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-35",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-36",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-37",
+      "grid": [
+        15,
+        14
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-38",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-39",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-40",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-41",
+      "grid": [
+        14,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "b-42",
+      "grid": [
+        14,
+        14
+      ],
+      "mismatch_pct": 0.0
+    }
+  ]
+}

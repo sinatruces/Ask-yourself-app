@@ -1,0 +1,362 @@
+{
+  "source": "cute-pixel-art-character-set-retro-2776485547.eps",
+  "background": "#CECECE",
+  "art_pixel_pt": 24.0,
+  "canvas": 16,
+  "palette": [
+    "#140C1C",
+    "#DEEED6",
+    "#757161",
+    "#D04648",
+    "#D2AA99",
+    "#597DCE",
+    "#854C30",
+    "#D27D2C",
+    "#6DC2CA",
+    "#6DAA2C",
+    "#4E4A4E",
+    "#DAD45E",
+    "#8595A1",
+    "#30346D",
+    "#346524",
+    "#442434"
+  ],
+  "characters": [
+    {
+      "file": "a-01",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-02",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-03",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-04",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-05",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-06",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-07",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-08",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-09",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-10",
+      "grid": [
+        16,
+        14
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-11",
+      "grid": [
+        16,
+        14
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-12",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-13",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-14",
+      "grid": [
+        15,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-15",
+      "grid": [
+        16,
+        14
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-16",
+      "grid": [
+        15,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-17",
+      "grid": [
+        14,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-18",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-19",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-20",
+      "grid": [
+        15,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-21",
+      "grid": [
+        14,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-22",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-23",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-24",
+      "grid": [
+        16,
+        14
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-25",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-26",
+      "grid": [
+        16,
+        14
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-27",
+      "grid": [
+        16,
+        14
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-28",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-29",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-30",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-31",
+      "grid": [
+        16,
+        14
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-32",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-33",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-34",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-35",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-36",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-37",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-38",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-39",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-40",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-41",
+      "grid": [
+        16,
+        15
+      ],
+      "mismatch_pct": 0.0
+    },
+    {
+      "file": "a-42",
+      "grid": [
+        16,
+        16
+      ],
+      "mismatch_pct": 0.0
+    }
+  ]
+}
