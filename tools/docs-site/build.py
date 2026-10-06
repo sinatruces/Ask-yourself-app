@@ -39,9 +39,11 @@ PAGES = [
     ("palette", "docs/02-brand/palette.md", "برند", "رنگ‌های برند، طیف‌ها، توکن‌های تم و گزارش کنتراست"),
     ("logo-spec", "docs/02-brand/logo-spec.md", "برند", "الزامات فنی لوگو و آیکون برای اندروید، iOS و فروشگاه‌ها"),
     ("product-thinking", "docs/03-product-thinking/product-thinking.md", "محصول", "JTBD، حلقه‌ی اصلی، قوانین محصول و دامنه‌ی MVP"),
+    ("survey", "docs/04-research/survey.md", "تحقیق", "پرسشنامه‌ی آنلاین کوتاه برای سنجش فرضیه‌ها"),
+    ("interview-guide", "docs/04-research/interview-guide.md", "تحقیق", "راهنمای مصاحبه‌ی نیمه‌ساختاریافته به روش JTBD"),
 ]
 EXTERNAL = {"docs/02-brand/visual-identity.md": IDENTITY_URL}
-GROUPS = ["پایه", "استراتژی", "برند", "محصول"]
+GROUPS = ["پایه", "استراتژی", "برند", "محصول", "تحقیق"]
 
 FA_DIGITS = str.maketrans("0123456789", "۰۱۲۳۴۵۶۷۸۹")
 
