@@ -43,9 +43,10 @@ PAGES = [
     ("desk-research", "docs/04-research/desk-research.md", "تحقیق", "علم عادت، زنجیره، گیمیفیکیشن و بنچمارک‌ها، با منبع"),
     ("market-iran", "docs/04-research/market-iran.md", "تحقیق", "کاربران، گوشی‌ها، فروشگاه‌ها، پرداخت و شرایط اینترنت ایران"),
     ("survey", "docs/04-research/survey.md", "تحقیق", "پرسشنامه‌ی آماده برای پرسلاین و برنامه‌ی تحلیل"),
+    ("competitors", "docs/05-competitors/competitor-analysis.md", "رقبا", "رقبای جهانی و ایرانی، ماتریس ویژگی‌ها، قیمت، آنبوردینگ، نظرات کاربران و فرصت‌ها"),
 ]
 EXTERNAL = {"docs/02-brand/visual-identity.md": IDENTITY_URL}
-GROUPS = ["پایه", "استراتژی", "برند", "محصول", "تحقیق"]
+GROUPS = ["پایه", "استراتژی", "برند", "محصول", "تحقیق", "رقبا"]
 
 FA_DIGITS = str.maketrans("0123456789", "۰۱۲۳۴۵۶۷۸۹")
 
