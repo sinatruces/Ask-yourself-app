@@ -1,0 +1,259 @@
+<title>کرکترهای دیدیت</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Estedad:wght@400..900&display=swap">
+<style>
+/* Layout: RTL column 60rem; phone-sized home hero next to the collection grid. Tokens from docs/02-brand/tokens.json */
+:root {
+  --bg: #F1FCEA; --surface: #FFFFFF; --surface-tint: #DFF8CF; --text: #061720; --text-muted: #58656D;
+  --outline: #061720; --border: #D6DEE3; --primary: #85C06C; --on-primary: #061720; --primary-pressed: #659E65;
+  --yes-text: #346856; --no-text: #58656D; --no-border: #758188; --medal: #F2B33D; --focus: #061720;
+  --font: "Estedad", Tahoma, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #061720; --surface: #0F1E26; --surface-tint: #1D423D; --text: #DFF8CF; --text-muted: #B9C3C9;
+    --outline: #000000; --border: #3C4A52; --primary-pressed: #9ED088; --yes-text: #85C06C; --no-text: #B9C3C9; --focus: #DFF8CF;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #061720; --surface: #0F1E26; --surface-tint: #1D423D; --text: #DFF8CF; --text-muted: #B9C3C9;
+  --outline: #000000; --border: #3C4A52; --primary-pressed: #9ED088; --yes-text: #85C06C; --no-text: #B9C3C9; --focus: #DFF8CF;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: var(--font); font-size: 15px; line-height: 1.8; padding-inline: 1rem; padding-block: 1.5rem 4rem; font-variant-numeric: tabular-nums; }
+.wrap { max-width: 60rem; margin-inline: auto; display: grid; gap: 2.4rem; }
+h1, h2, h3 { margin: 0; line-height: 1.45; text-wrap: balance; }
+h1 { font-size: clamp(1.7rem, 5vw, 2.3rem); font-weight: 900; }
+h2 { font-size: 1.3rem; font-weight: 900; display: flex; align-items: center; gap: 0.6rem; }
+h2::before { content: ""; width: 12px; height: 12px; background: var(--primary); box-shadow: 0 0 0 2px var(--outline); }
+p { margin: 0; }
+.muted { color: var(--text-muted); }
+.small { font-size: 0.85rem; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.px { background: var(--surface); box-shadow: 0 -2px 0 0 var(--outline), 0 2px 0 0 var(--outline), -2px 0 0 0 var(--outline), 2px 0 0 0 var(--outline), 0 6px 0 0 var(--outline); margin: 2px 2px 8px; }
+.logo svg { display: block; height: auto; width: min(240px, 70%); }
+.logo svg.logo-dark { display: none; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .logo svg.logo-light { display: none; } :root:not([data-theme="light"]) .logo svg.logo-dark { display: block; } }
+:root[data-theme="dark"] .logo svg.logo-light { display: none; }
+:root[data-theme="dark"] .logo svg.logo-dark { display: block; }
+.cover { background: var(--surface-tint); padding: 1.5rem; display: grid; gap: 0.9rem; }
+.eyebrow { font-size: 0.8rem; font-weight: 800; color: var(--text-muted); }
+canvas { image-rendering: pixelated; image-rendering: crisp-edges; display: block; }
+
+/* hero (home screen idea) */
+.top { display: grid; grid-template-columns: 21rem minmax(0, 1fr); gap: 1.6rem; align-items: start; }
+@media (max-width: 52rem) { .top { grid-template-columns: 1fr; justify-items: center; } .top > .side { justify-self: stretch; } }
+.phone { width: 21rem; max-width: 100%; background: #02080B; padding: 10px; border-radius: 34px; }
+.scr { background: var(--bg); border-radius: 26px; padding: 0.9rem; display: grid; gap: 0.8rem; min-height: 36rem; align-content: start; }
+.hero { background: var(--surface-tint); padding: 0.8rem; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0.8rem; align-items: center; box-shadow: 0 -2px 0 0 var(--outline), 0 2px 0 0 var(--outline), -2px 0 0 0 var(--outline), 2px 0 0 0 var(--outline); margin: 2px; }
+.hero-info { display: grid; gap: 0.35rem; min-width: 0; }
+.hero-info b { font-weight: 900; font-size: 1.05rem; }
+.lvl { font-size: 0.78rem; font-weight: 800; color: var(--text-muted); }
+.xpbar { display: flex; gap: 3px; }
+.xpbar i { flex: 1; height: 9px; background: var(--surface); box-shadow: 0 0 0 1.5px var(--outline); }
+.xpbar i.on { background: var(--primary); }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.5rem; }
+.stat { background: var(--surface); padding: 0.45rem 0.4rem; text-align: center; box-shadow: 0 0 0 1px var(--border); }
+.stat b { display: block; font-weight: 900; font-size: 1.1rem; }
+.stat span { font-size: 0.7rem; color: var(--text-muted); }
+.qcard { background: var(--surface); padding: 0.85rem; display: grid; gap: 0.7rem; box-shadow: 0 -2px 0 0 var(--outline), 0 2px 0 0 var(--outline), -2px 0 0 0 var(--outline), 2px 0 0 0 var(--outline), 0 6px 0 0 var(--outline); margin: 2px 2px 8px; }
+.qcard .cat { font-size: 0.7rem; color: var(--text-muted); }
+.qcard .q { font-size: 1.35rem; font-weight: 800; }
+.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
+.btn { font: inherit; font-weight: 800; border: 0; cursor: pointer; padding: 0.45rem; color: #061720; background: #85C06C; box-shadow: 0 -2px 0 0 #061720, 0 2px 0 0 #061720, -2px 0 0 0 #061720, 2px 0 0 0 #061720, 0 6px 0 0 #061720, inset 0 2px 0 0 #DFF8CF; margin: 2px 2px 8px; transition: transform 60ms steps(1); }
+.btn:active { transform: translateY(4px); box-shadow: 0 -2px 0 0 #061720, 0 2px 0 0 #061720, -2px 0 0 0 #061720, 2px 0 0 0 #061720, inset 0 2px 0 0 #DFF8CF; }
+.btn.no { background: var(--surface); color: var(--no-text); box-shadow: 0 -2px 0 0 var(--no-border), 0 2px 0 0 var(--no-border), -2px 0 0 0 var(--no-border), 2px 0 0 0 var(--no-border), 0 6px 0 0 var(--no-border); }
+.btn.no:active { box-shadow: 0 -2px 0 0 var(--no-border), 0 2px 0 0 var(--no-border), -2px 0 0 0 var(--no-border), 2px 0 0 0 var(--no-border); }
+.toast { min-height: 1.6em; font-size: 0.85rem; font-weight: 700; color: var(--yes-text); text-align: center; }
+.side { display: grid; gap: 1rem; }
+.side ul { margin: 0; padding-inline-start: 1.2rem; display: grid; gap: 0.35rem; }
+.side li::marker { color: var(--yes-text); }
+
+/* controls */
+.controls { display: flex; flex-wrap: wrap; gap: 1.2rem; align-items: center; }
+.seg { display: inline-flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; }
+.seg > span { font-size: 0.8rem; font-weight: 800; color: var(--text-muted); margin-inline-end: 0.2rem; }
+.chip { font: inherit; font-size: 0.82rem; font-weight: 700; border: 0; cursor: pointer; color: var(--text); background: var(--surface); padding: 0.1rem 0.75rem; box-shadow: 0 -2px 0 0 var(--outline), 0 2px 0 0 var(--outline), -2px 0 0 0 var(--outline), 2px 0 0 0 var(--outline); margin: 2px; }
+.chip[aria-pressed="true"] { background: var(--primary); color: #061720; }
+
+/* collection */
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem; }
+@media (max-width: 44rem) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.card { font: inherit; color: var(--text); border: 0; cursor: pointer; text-align: center; padding: 0.9rem 0.6rem 0.8rem; display: grid; justify-items: center; gap: 0.4rem; }
+.card[aria-pressed="true"] { background: var(--surface-tint); }
+.card b { font-weight: 900; }
+.card span { font-size: 0.78rem; color: var(--text-muted); }
+.badge { font-size: 0.7rem; font-weight: 800; padding: 0 0.5rem; background: var(--medal); color: #061720; }
+.table-wrap { overflow-x: auto; padding: 2px 2px 8px; }
+table { width: 100%; border-collapse: collapse; min-width: 30rem; font-size: 0.88rem; background: var(--surface); box-shadow: 0 -2px 0 0 var(--outline), 0 2px 0 0 var(--outline), -2px 0 0 0 var(--outline), 2px 0 0 0 var(--outline); }
+th, td { text-align: start; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); }
+th { font-size: 0.76rem; color: var(--text-muted); font-weight: 800; background: var(--surface-tint); }
+tr:last-child td { border-bottom: 0; }
+.foot { display: flex; gap: 0.8rem; align-items: center; flex-wrap: wrap; border-top: 2px dashed var(--border); padding-top: 1rem; font-size: 0.8rem; color: var(--text-muted); }
+.foot code { font-family: ui-monospace, Menlo, monospace; direction: ltr; unicode-bidi: isolate; }
+</style>
+
+<div class="wrap" dir="rtl" lang="fa">
+  <section class="px cover">
+    <span class="logo" role="img" aria-label="دیدیت">{{LOGO}}</span>
+    <p class="eyebrow">پیش‌نویس ۱ · تصمیم D-035 · برای بازبینی طراح</p>
+    <h1>کرکترهای دیدیت</h1>
+    <p>شش حیوان پیکسلی روی یک قالب بدن مشترک ۳۲×۳۲، با پالت برند. هر وسیله روی همه‌ی کرکترها می‌شینه. این‌ها پیش‌نویس منن و نسخه‌ی نهایی با توئه.</p>
+  </section>
+
+  <section class="top" aria-label="ایده‌ی صفحه‌ی اصلی">
+    <div class="phone">
+      <div class="scr">
+        <div class="hero">
+          <canvas id="hero" width="128" height="128" aria-label="کرکتر کاربر"></canvas>
+          <div class="hero-info">
+            <b id="hero-name">گربه</b>
+            <span class="lvl" id="hero-lvl">سطح ۷ · ۴۶۰ از ۵۶۰ <bdi>XP</bdi></span>
+            <span class="xpbar" id="xpbar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="stat"><b>۱۲</b><span>زنجیره</span></div>
+          <div class="stat"><b>۸۷٪</b><span>پایبندی ۳۰ روزه</span></div>
+          <div class="stat"><b>۳۴۰</b><span>امتیاز نظم</span></div>
+        </div>
+        <div class="qcard">
+          <span class="cat">ورزش › هوازی › دویدن</span>
+          <p class="q">امروز دویدی؟</p>
+          <div class="actions"><button type="button" class="btn" id="yes">بله</button><button type="button" class="btn no" id="no">خیر</button></div>
+          <p class="toast" id="toast" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+    <div class="side">
+      <h2>ایده‌ی صفحه‌ی اصلی</h2>
+      <p>کرکتر کاربر بالای صفحه، متحرک، با سطح و نوار XP و سه آمار کوتاه. سؤال‌های امروز بلافاصله زیرشن تا حلقه‌ی روزانه زیر ۱۰ ثانیه بمونه.</p>
+      <ul>
+        <li>«بله» رو بزن: کرکتر جشن می‌گیره و ۱۰ XP اضافه می‌شه.</li>
+        <li>«خیر» رو بزن: ۴ XP، با پیام بدون قضاوت.</li>
+        <li>از کلکسیون پایین، کرکتر یا وسیله‌ی دیگه‌ای انتخاب کن.</li>
+      </ul>
+      <p class="muted small">آمار و سطح این صفحه نمونه‌ان. تم روشن و تیره از تنظیمات دستگاهت میاد.</p>
+    </div>
+  </section>
+
+  <section style="display:grid;gap:1.1rem">
+    <h2>کلکسیون</h2>
+    <div class="controls">
+      <div class="seg" role="group" aria-label="انیمیشن"><span>انیمیشن</span>
+        <button type="button" class="chip" data-anim="idle" aria-pressed="true">ایستاده</button>
+        <button type="button" class="chip" data-anim="celebrate" aria-pressed="false">جشن</button>
+        <button type="button" class="chip" data-anim="sleepy" aria-pressed="false">خواب‌آلود</button>
+      </div>
+      <div class="seg" role="group" aria-label="وسیله"><span>وسیله</span>
+        <button type="button" class="chip" data-item="none" aria-pressed="true">هیچ</button>
+        {{ITEM_CHIPS}}
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section style="display:grid;gap:1rem">
+    <h2>قالب مشترک</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>قاعده</th><th>مقدار</th></tr></thead>
+      <tbody>
+        <tr><td>ابعاد</td><td>۳۲×۳۲ پیکسل؛ نمایش با ضریب صحیح (اینجا ۴ برابر)</td></tr>
+        <tr><td>بدن</td><td>ردیف‌های ۱۹ تا ۳۱ برای همه یکیه؛ کرکترها در سر، رنگ و لایه‌ی پشت (دم، لاک، بال) فرق دارن</td></tr>
+        <tr><td>جای وسیله‌ها</td><td>چشم (عینک)، پیشونی (هدبند)، گردن (شال)، بدن، دست و پا؛ بالای سر به‌خاطر گوش و شاخ آزاد می‌مونه</td></tr>
+        <tr><td>رنگ</td><td>فقط شب، برگ، جوانه، جنگل و طلا؛ روی زمینه‌ی تیره خط دور «جنگل» می‌شه، مثل لوگو</td></tr>
+        <tr><td>انیمیشن</td><td>ایستاده ۶ فریم، جشن ۵ فریم، خواب‌آلود ۴ فریم؛ پله‌ای، ۳ تا ۸ فریم در ثانیه</td></tr>
+        <tr><td>هنوز ساخته نشده</td><td>حالت «همراهی» بعد از «خیر»، انیمیشن بالا رفتن سطح، ۹ وسیله‌ی دیگه</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <footer class="foot"><span>منبع: <code>tools/characters/sprites.py</code></span><span>با «کاهش حرکت»، فقط فریم ثابت نشون داده می‌شه.</span></footer>
+</div>
+
+<script>
+const DATA = {{DATA}};
+const PAL = { e: "#061720", s: "#DFF8CF", l: "#85C06C", f: "#346856", g: "#F2B33D" };
+const SPEED = { idle: 250, celebrate: 130, sleepy: 380 };
+let reduce = false;
+try { reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches; } catch (e) {}
+function isDark() {
+  const t = document.documentElement.getAttribute("data-theme");
+  if (t) return t === "dark";
+  try { return window.matchMedia("(prefers-color-scheme: dark)").matches; } catch (e) { return false; }
+}
+function draw(cv, char, rows) {
+  const c = DATA.characters[char], ctx = cv.getContext("2d"), s = cv.width / 32;
+  ctx.clearRect(0, 0, cv.width, cv.height);
+  const outline = isDark() ? "#346856" : "#061720";
+  for (let y = 0; y < 32; y++) for (let x = 0; x < 32; x++) {
+    const k = rows[y][x];
+    const col = k === "k" ? outline : k === "B" ? c.B : k === "b" ? c.b : PAL[k];
+    if (col) { ctx.fillStyle = col; ctx.fillRect(x * s, y * s, s, s); }
+  }
+}
+const players = [];
+function player(cv, char) {
+  const p = { cv, char, item: "none", anim: "idle", i: 0, once: null };
+  players.push(p); return p;
+}
+function framesOf(p) { return DATA.characters[p.char].frames[p.item][p.once || p.anim]; }
+function tick(p) {
+  const fr = framesOf(p);
+  draw(p.cv, p.char, fr[reduce ? 0 : p.i % fr.length]);
+  if (reduce) return;
+  p.i++;
+  if (p.once && p.i >= fr.length) { p.once = null; p.i = 0; }
+  p.t = setTimeout(() => tick(p), SPEED[p.once || p.anim]);
+}
+function restart(p) { clearTimeout(p.t); p.i = 0; tick(p); }
+
+// collection
+const grid = document.getElementById("grid");
+const hero = player(document.getElementById("hero"), "cat");
+const cards = [];
+Object.entries(DATA.characters).forEach(([key, c]) => {
+  const b = document.createElement("button");
+  b.type = "button"; b.className = "px card"; b.setAttribute("aria-pressed", key === "cat" ? "true" : "false");
+  const cv = document.createElement("canvas"); cv.width = 128; cv.height = 128; cv.setAttribute("aria-hidden", "true");
+  b.append(cv);
+  const name = document.createElement("b"); name.textContent = c.name;
+  const lvl = document.createElement("span"); lvl.textContent = c.unlock === 1 ? "شروع" : "سطح " + c.unlock.toLocaleString("fa-IR");
+  b.append(name, lvl);
+  if (c.unlock === 10) { const bd = document.createElement("span"); bd.className = "badge"; bd.textContent = "ویژه‌ی «عادت شد»"; b.append(bd); }
+  b.addEventListener("click", () => {
+    cards.forEach(x => x.setAttribute("aria-pressed", "false")); b.setAttribute("aria-pressed", "true");
+    hero.char = key; document.getElementById("hero-name").textContent = c.name; restart(hero);
+  });
+  grid.append(b); cards.push(b);
+  restart(player(cv, key));
+});
+restart(hero);
+
+document.querySelectorAll("[data-anim]").forEach(btn => btn.addEventListener("click", () => {
+  document.querySelectorAll("[data-anim]").forEach(x => x.setAttribute("aria-pressed", String(x === btn)));
+  players.forEach(p => { if (p !== hero) { p.anim = btn.dataset.anim; restart(p); } });
+}));
+document.querySelectorAll("[data-item]").forEach(btn => btn.addEventListener("click", () => {
+  document.querySelectorAll("[data-item]").forEach(x => x.setAttribute("aria-pressed", String(x === btn)));
+  players.forEach(p => { p.item = btn.dataset.item; restart(p); });
+}));
+
+// home hero interaction
+let xp = 460;
+const toast = document.getElementById("toast");
+function setXp(add, msg) {
+  xp = Math.min(560, xp + add);
+  document.getElementById("hero-lvl").textContent = "سطح ۷ · " + xp.toLocaleString("fa-IR") + " از ۵۶۰ \u2068XP\u2069";
+  const on = Math.round((xp - 420) / 14);
+  document.querySelectorAll("#xpbar i").forEach((el, i) => el.classList.toggle("on", i < on));
+  toast.textContent = msg;
+}
+document.getElementById("yes").addEventListener("click", () => { hero.once = "celebrate"; restart(hero); setXp(10, "آفرین. زنجیره‌ت شد ۱۳ روز. ‎+۱۰ XP"); });
+document.getElementById("no").addEventListener("click", () => { hero.once = null; restart(hero); setXp(4, "ممنون که صادق بودی. فردا دوباره می‌پرسم. ‎+۴ XP"); });
+setXp(0, "");
+try { window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => players.forEach(restart)); } catch (e) {}
+</script>
