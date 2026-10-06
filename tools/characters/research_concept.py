@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Concept image for survey Q14 and the interview: one candidate character with an
+"""Concept image for survey Q16: one candidate character with an
 XP bar, next to two locked silhouettes. No Didit logo or name (D-047).
 
 Usage: python3 tools/characters/research_concept.py
