@@ -15,7 +15,7 @@
 
 **وضعیت‌ها:** ⬜ شروع نشده · 🟡 در حال انجام · ✅ تمام‌شده
 
-**همه‌ی اسناد با هویت بصری:** [مجموعه‌ی اسناد دیدیت](https://claude.ai/artifact/UKKarSEFcVJJfPSsx2p6c8)
+**همه‌ی اسناد با هویت بصری:** [مجموعه‌ی اسناد دیدیت](https://claude.ai/artifact/F2sPDzLa4rNtELc2TcVoNi)
 
 ---
 

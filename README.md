@@ -17,7 +17,7 @@
 
 ## اسناد
 
-**نسخه‌ی برندشده‌ی همه‌ی اسناد:** [مجموعه‌ی اسناد دیدیت](https://claude.ai/artifact/UKKarSEFcVJJfPSsx2p6c8) (ساخته‌شده با [`tools/docs-site/`](tools/docs-site/))
+**نسخه‌ی برندشده‌ی همه‌ی اسناد:** [مجموعه‌ی اسناد دیدیت](https://claude.ai/artifact/F2sPDzLa4rNtELc2TcVoNi) (ساخته‌شده با [`tools/docs-site/`](tools/docs-site/))
 
 | سند | توضیح |
 |---|---|
