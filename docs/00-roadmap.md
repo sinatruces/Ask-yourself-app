@@ -98,11 +98,11 @@
 - آیکون‌ها (Pixelarticons) و اعداد پیکسلی فارسی ✅
 - کامپوننت‌ها: ۱۳ اتم، ۱۳ مولکول، ۱۴ ارگانیسم، ۴ قالب ✅
 - قواعد راست‌به‌چپ، دارک‌مود و دسترس‌پذیری ✅
-- صفحه‌ی تعاملی کامپوننت‌ها (روشن و تیره) ✅
+- سایت تعاملی دیزاین سیستم با Playground و شبیه‌ساز «امروز» ✅ (D-059)
 - **کرکترها:** صفحه‌ی انتخاب از [کاندیدها](02-brand/characters/candidates/README.md) با دو پیشنهاد رنگ ✅؛ انتخاب ۶ کرکتر و بررسی لایسنس (طراح محصول) 🟡
 - بازبینی طراح و بستن مرحله 🟡
 
-**خروجی:** [دیزاین سیستم](07-design-system/design-system.md) · [پایه‌ها](07-design-system/foundations.md) · [کامپوننت‌ها](07-design-system/components.md) · [راست‌به‌چپ و دسترس‌پذیری](07-design-system/accessibility.md) · [کرکترها](07-design-system/characters.md) · [صفحه‌ی تعاملی کامپوننت‌ها](https://claude.ai/artifact/3sSuWEtZGgnKJcAGbh33Kt) · [انتخاب کرکترها](https://claude.ai/artifact/JM4KBx5EyVazMasQeogWsv)
+**خروجی:** [دیزاین سیستم](07-design-system/design-system.md) · [پایه‌ها](07-design-system/foundations.md) · [کامپوننت‌ها](07-design-system/components.md) · [راست‌به‌چپ و دسترس‌پذیری](07-design-system/accessibility.md) · [کرکترها](07-design-system/characters.md) · [سایت دیزاین سیستم](https://claude.ai/artifact/3sSuWEtZGgnKJcAGbh33Kt) · [انتخاب کرکترها](https://claude.ai/artifact/JM4KBx5EyVazMasQeogWsv)
 
 ## مرحله‌ی ۸: دیزاین ابتدایی ⬜
 

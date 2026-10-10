@@ -17,6 +17,8 @@
 | `character_palettes.py` | نگاشت رنگ کاندیدهای کرکتر به پالت برند (دو پیشنهاد) | ماژول، استفاده در `build_pages.py` |
 | `build_pages.py` | دو صفحه‌ی تعاملی از قالب‌های `pages/` | `build/design-system/characters.html` و `components.html` |
 
+**سایت دیزاین سیستم** (`components.html`) از چهار فایل ساخته می‌شه: `pages/components.html` (اسکلت)، `pages/components.css` (چیدمان و ظاهر کامپوننت‌ها)، `pages/ds-core.js` (ابزارهای پایه و فهرست همه‌ی کامپوننت‌ها: رندر، ویژگی‌ها، گونه‌ها، حالت‌ها، توکن‌ها، بایدها و نبایدها، دسترس‌پذیری و کد Flutter) و `pages/ds-app.js` (منو، صفحه‌ها، Playground و شبیه‌ساز «امروز»). برای کامپوننت تازه فقط یک ورودی به `REG` در `ds-core.js` اضافه می‌شه؛ صفحه‌ی مستندات و کنترل‌های Playground خودکار ساخته می‌شن.
+
 ```bash
 python3 tools/design-system/build_tokens.py --check
 python3 tools/design-system/pixel_numerals.py --preview

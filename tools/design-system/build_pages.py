@@ -81,6 +81,12 @@ def fill(template, **parts):
     html = (PAGES / template).read_text("utf-8")
     html = html.replace("/*{{TOKENS_CSS}}*/", (DS / "tokens/tokens.css").read_text("utf-8"))
     html = html.replace("/*{{PIXEL_CSS}}*/", (PAGES / "pixel.css").read_text("utf-8"))
+    html = html.replace("/*{{THEME_SCOPES}}*/", theme_scopes())
+    if "/*{{APP_CSS}}*/" in html:
+        html = html.replace("/*{{APP_CSS}}*/", (PAGES / "components.css").read_text("utf-8"))
+        js = "\n".join((PAGES / f).read_text("utf-8") for f in ("ds-core.js", "ds-app.js"))
+        assert "</script" not in js
+        html = html.replace("/*{{APP_JS}}*/", js)
     html = html.replace("{{LOGO}}", logo())
     for k, v in parts.items():
         html = html.replace(f"/*{{{{{k}}}}}*/null", json.dumps(v, ensure_ascii=False, separators=(",", ":")))
@@ -96,6 +102,19 @@ def main():
     print(f"pages -> {OUT.relative_to(ROOT)}")
 
 
+def resolved():
+    return json.loads((DS / "tokens/tokens.resolved.json").read_text("utf-8"))
+
+
+def theme_scopes():
+    """Same role variables as tokens.css, scoped to .dd-light / .dd-dark so a preview can force a theme."""
+    out = []
+    for mode in ("light", "dark"):
+        rules = [f"  --dd-{k.split('.', 2)[2]}: {v['value']};" for k, v in resolved().items() if k.startswith(f"theme.{mode}.")]
+        out.append(f".dd-{mode} {{\n" + "\n".join(rules) + f"\n  color-scheme: {mode};\n  color: var(--dd-text);\n}}")
+    return "\n".join(out)
+
+
 def showcase_data():
     icons = {}
     for f in sorted((DS / "icons/svg").glob("*.svg")):
@@ -103,8 +122,10 @@ def showcase_data():
         icons[f.stem] = m
     numerals = json.loads((DS / "numerals/numerals.json").read_text("utf-8"))
     cd = character_data()
-    return {"icons": icons, "numerals": numerals, "palette": cd["palette"], "maps": cd["maps"],
-            "chars": {c["id"]: c["rows"] for c in cd["chars"] if c["id"] in ("b-05", "b-16", "b-33")}}
+    tokens = {k: v["value"] for k, v in resolved().items()}
+    return {"icons": icons, "iconMeta": json.loads((DS / "icons/icons.json").read_text("utf-8"))["icons"],
+            "numerals": numerals, "palette": cd["palette"], "maps": cd["maps"], "tokens": tokens,
+            "chars": {c["id"]: c["rows"] for c in cd["chars"] if c["id"] in ("b-05", "b-16", "b-33", "b-12")}}
 
 
 if __name__ == "__main__":

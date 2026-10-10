@@ -45,7 +45,7 @@
 | [درخت دسته‌ها](docs/06-design-thinking/category-tree.md) | دسته‌ها و قالب‌های سؤال |
 | [دیزاین سیستم](docs/07-design-system/design-system.md) | اصول، Atomic Design، قاعده‌ی پیکسلی ترکیبی و نقشه‌ی فایل‌ها (پیش‌نویس) |
 | [پایه‌های دیزاین سیستم](docs/07-design-system/foundations.md) | رنگ، تایپوگرافی، اعداد پیکسلی، فاصله، شکل، حرکت و آیکون (پیش‌نویس) |
-| [کامپوننت‌ها](docs/07-design-system/components.md) | ۴۴ کامپوننت از اتم تا قالب ([صفحه‌ی تعاملی](https://claude.ai/artifact/3sSuWEtZGgnKJcAGbh33Kt)) (پیش‌نویس) |
+| [کامپوننت‌ها](docs/07-design-system/components.md) | ۴۴ کامپوننت از اتم تا قالب ([سایت دیزاین سیستم و Playground](https://claude.ai/artifact/3sSuWEtZGgnKJcAGbh33Kt)) (پیش‌نویس) |
 | [راست‌به‌چپ، تم تیره و دسترس‌پذیری](docs/07-design-system/accessibility.md) | قواعد جهت، تم، کنتراست و صفحه‌خوان (پیش‌نویس) |
 | [کرکترها](docs/07-design-system/characters.md) | انتخاب و استفاده‌ی کرکترها ([صفحه‌ی انتخاب](https://claude.ai/artifact/JM4KBx5EyVazMasQeogWsv)) (پیش‌نویس) |
 
