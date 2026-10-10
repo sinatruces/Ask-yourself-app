@@ -44,10 +44,17 @@ PAGES = [
     ("market-iran", "docs/04-research/market-iran.md", "تحقیق", "کاربران، گوشی‌ها، فروشگاه‌ها، پرداخت و شرایط اینترنت ایران"),
     ("survey", "docs/04-research/survey.md", "تحقیق", "پرسشنامه‌ی آماده برای پرسلاین و برنامه‌ی تحلیل"),
     ("survey-results", "docs/04-research/survey-results.md", "تحقیق", "تحلیل ۳۳ پاسخ پرسشنامه، بینش‌ها و پیشنهادها"),
+    ("research-synthesis", "docs/06-design-thinking/research-synthesis.md", "تفکر طراحی", "ده موضوع از شواهد تحقیق، پرسشنامه و رقبا، و هفت اصل طراحی"),
+    ("personas", "docs/06-design-thinking/personas.md", "تفکر طراحی", "سه پرسونای رفتاری با Empathy Map، از داده‌ی پرسشنامه"),
+    ("journey-map", "docs/06-design-thinking/journey-map.md", "تفکر طراحی", "سفر ۳۰ روز اول، منحنی احساس و لحظه‌های حیاتی"),
+    ("hmw", "docs/06-design-thinking/hmw.md", "تفکر طراحی", "بیانیه‌ی مسئله، ده سؤال «چطور می‌تونیم» و ایده‌های اولویت‌بندی‌شده"),
+    ("user-flows", "docs/06-design-thinking/user-flows.md", "تفکر طراحی", "نُه فلوی حیاتی MVP با نمودار، و فهرست نوتیفیکیشن‌ها"),
+    ("information-architecture", "docs/06-design-thinking/information-architecture.md", "تفکر طراحی", "ناوبری، ۲۴ صفحه، ترتیب صفحه‌ی اصلی و ورودی دیزاین سیستم"),
+    ("category-tree", "docs/06-design-thinking/category-tree.md", "تفکر طراحی", "دوازده دسته‌ی مادر، زیردسته‌ها و حدود ۶۰ قالب سؤال"),
     ("competitors", "docs/05-competitors/competitor-analysis.md", "رقبا", "رقبای جهانی و ایرانی، ماتریس ویژگی‌ها، قیمت، آنبوردینگ، نظرات کاربران و فرصت‌ها"),
 ]
 EXTERNAL = {"docs/02-brand/visual-identity.md": IDENTITY_URL}
-GROUPS = ["پایه", "استراتژی", "برند", "محصول", "تحقیق", "رقبا"]
+GROUPS = ["پایه", "استراتژی", "برند", "محصول", "تحقیق", "رقبا", "تفکر طراحی"]
 
 FA_DIGITS = str.maketrans("0123456789", "۰۱۲۳۴۵۶۷۸۹")
 
@@ -155,10 +162,42 @@ def render(source: str, page_of: dict, hub_url: str | None = None):
         return f'<div class="table-wrap"><table{cls}>' + t.group(1) + "</table></div>"
 
     body = re.sub(r"<table>(.*?)</table>", wrap_table, body, flags=re.S)
+    # ```mermaid blocks: GitHub draws them natively; the site draws them with mermaid.js (see MERMAID_JS)
+    body = re.sub(r'<pre><code class="language-mermaid">(.*?)</code></pre>',
+                  r'<div class="diagram-wrap"><pre class="mermaid">\1</pre></div>', body, flags=re.S)
     for k, v in STATUS.items():
         body = body.replace(k + "️", v).replace(k, v)
         meta = meta.replace(k, v)
     return title, meta, body
+
+
+# Brand colours from docs/02-brand/tokens.json; the page script picks light or dark by the viewer's theme
+MERMAID_SRC = "https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"
+MERMAID_JS = """<script>
+(function () {
+  function draw() {
+    var dark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    var c = dark
+      ? {bg: "#0E2430", node: "#173544", text: "#DFF8CF", line: "#85C06C", accent: "#346856"}
+      : {bg: "#F4FCEE", node: "#DFF8CF", text: "#061720", line: "#346856", accent: "#85C06C"};
+    window.mermaid.initialize({
+      startOnLoad: false, theme: "base", securityLevel: "strict",
+      fontFamily: "Estedad, Tahoma, sans-serif",
+      themeVariables: {
+        background: c.bg, primaryColor: c.node, primaryTextColor: c.text, primaryBorderColor: c.text,
+        lineColor: c.line, secondaryColor: c.accent, tertiaryColor: c.bg, edgeLabelBackground: c.bg, fontSize: "15px"
+      },
+      flowchart: {htmlLabels: true, curve: "linear"}
+    });
+    window.mermaid.run({querySelector: "pre.mermaid:not([data-processed])"});
+  }
+  if (window.mermaid) { draw(); return; }
+  var s = document.createElement("script");
+  s.src = "__SRC__";
+  s.onload = draw;
+  document.head.appendChild(s);
+})();
+</script>""".replace("__SRC__", MERMAID_SRC)
 
 
 def page_html(slug, title, group, meta, body, source, hub_href, standalone_css=None):
@@ -189,6 +228,8 @@ def page_html(slug, title, group, meta, body, source, hub_href, standalone_css=N
     if standalone_css:  # artifact main page: the host adds <html>, <head>, charset and viewport
         head = re.sub(r"<meta [^>]+>\n", "", head).replace(f"{html.escape(title)} · دیدیت", f"{html.escape(title)} دیدیت")
         return head + "\n" + content + "\n"
+    if 'class="mermaid"' in body:
+        content += "\n" + MERMAID_JS
     return f'<!doctype html>\n<html lang="fa" dir="rtl">\n<head>\n{head}\n</head>\n<body>\n{content}\n</body>\n</html>\n'
 
 

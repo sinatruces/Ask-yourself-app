@@ -120,3 +120,7 @@ a { color: var(--yes-text); text-underline-offset: 3px; }
 
 /* images in documents: pixel art stays crisp */
 .doc img { max-width: 100%; height: auto; image-rendering: pixelated; }
+
+/* mermaid diagrams (flows, journey): scroll sideways on narrow screens, keep left-to-right drawing */
+.doc .diagram-wrap { overflow-x: auto; margin: 1.25rem 0; padding: 1rem; background: var(--surface); box-shadow: 0 -2px 0 0 var(--outline), 0 2px 0 0 var(--outline), -2px 0 0 0 var(--outline), 2px 0 0 0 var(--outline), 0 6px 0 0 var(--outline); }
+.doc pre.mermaid { margin: 0; background: none; border: 0; padding: 0; box-shadow: none; overflow: visible; text-align: center; direction: ltr; white-space: pre; }
