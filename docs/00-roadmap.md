@@ -86,7 +86,7 @@
 - بیانیه‌ی مسئله، سؤال‌های How Might We و ایده‌ها ✅ (D-055)
 - فلوی کاربر (User Flow) و معماری اطلاعات ✅
 - درخت دسته‌بندی‌ها (سه سطح) و قالب‌های سؤال ✅
-- بازبینی طراح و بستن مرحله ⬜
+- بازبینی طراح و بستن مرحله 🟡 (D-055، D-056)
 
 **خروجی:** [جمع‌بندی شواهد](06-design-thinking/research-synthesis.md) · [پرسوناها](06-design-thinking/personas.md) · [سفر کاربر](06-design-thinking/journey-map.md) · [مسئله‌ها و ایده‌ها](06-design-thinking/hmw.md) · [فلوهای کاربر](06-design-thinking/user-flows.md) · [معماری اطلاعات](06-design-thinking/information-architecture.md) · [درخت دسته‌ها](06-design-thinking/category-tree.md)
 
