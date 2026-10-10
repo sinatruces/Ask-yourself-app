@@ -1,0 +1,426 @@
+<title>انتخاب کرکترهای دیدیت</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Estedad:wght@400..900&display=swap">
+<style>
+/*{{TOKENS_CSS}}*/
+/*{{PIXEL_CSS}}*/
+/* Layout: one reading column; a sticky tray of six release slots above a dense sprite grid. */
+:root { --font: var(--dd-font-family); --gutter: var(--dd-space-4); }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--dd-bg); color: var(--dd-text); direction: rtl;
+  font-family: var(--font); font-size: var(--dd-type-body-size); line-height: var(--dd-type-body-line);
+  padding-inline: var(--gutter); padding-block: var(--dd-space-5) var(--dd-space-16);
+}
+.wrap { max-width: 68rem; margin-inline: auto; display: grid; gap: var(--dd-space-6); }
+:focus-visible { outline: 3px solid var(--dd-focus); outline-offset: 3px; }
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+h1 { font-size: var(--dd-type-title-1-size); line-height: var(--dd-type-title-1-line); font-weight: 800; }
+h2 { font-size: var(--dd-type-title-2-size); line-height: var(--dd-type-title-2-line); font-weight: var(--dd-type-title-2-weight); }
+p { margin: 0; }
+.muted { color: var(--dd-text-muted); font-size: var(--dd-type-small-size); line-height: var(--dd-type-small-line); }
+.logo { display: block; height: 32px; width: auto; }
+.logo-dark { display: none; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .logo-light { display: none; } :root:not([data-theme="light"]) .logo-dark { display: block; } }
+:root[data-theme="dark"] .logo-light { display: none; }
+:root[data-theme="dark"] .logo-dark { display: block; }
+
+header { display: grid; gap: var(--dd-space-3); }
+header .intro { max-width: 44rem; }
+
+/* tray */
+.tray { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; padding-block: var(--dd-space-2); background: var(--dd-bg); }
+.tray-inner { --px-fill: var(--dd-surface); padding: var(--dd-space-3); display: grid; gap: var(--dd-space-3); }
+.slots { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--dd-space-2); }
+.slot { --px-fill: var(--dd-surface-sunken); --px-line: var(--dd-border); display: grid; justify-items: center; gap: 2px; padding: var(--dd-space-2) 4px; cursor: pointer; border: 0; font: inherit; color: inherit; min-width: 0; }
+.slot.filled { --px-fill: var(--dd-surface-tint); --px-line: var(--dd-outline); }
+.slot.target { --px-line: var(--dd-focus); --px-fill: var(--dd-surface-pressed); }
+.slot canvas, .slot .empty { width: 48px; height: 48px; }
+.slot .empty { display: grid; place-items: center; color: var(--dd-text-muted); font-size: 22px; font-weight: 800; }
+.slot b { font-size: var(--dd-type-label-size); line-height: var(--dd-type-label-line); font-weight: 700; white-space: nowrap; }
+.slot small { font-size: 11px; line-height: 16px; color: var(--dd-text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+.tray-row { display: flex; flex-wrap: wrap; gap: var(--dd-space-2) var(--dd-space-4); align-items: center; justify-content: space-between; }
+.status { font-size: var(--dd-type-small-size); color: var(--dd-text-muted); }
+.status.ok { color: var(--dd-yes-text); }
+.status.err { color: var(--dd-error); }
+
+/* buttons and segmented controls */
+.btn { --px-fill: var(--dd-primary); border: 0; font: inherit; font-weight: 700; color: var(--dd-on-primary); padding: 10px var(--dd-space-5); cursor: pointer; min-height: 44px; }
+.btn.secondary { --px-fill: var(--dd-surface); color: var(--dd-text); }
+.btn:active { transform: translateY(var(--dd-elevation-rest)); }
+.lift:has(.btn:active) { filter: none; }
+.btn[disabled] { --px-fill: var(--dd-disabled-bg); color: var(--dd-disabled-text); cursor: default; }
+.controls { display: flex; flex-wrap: wrap; gap: var(--dd-space-3) var(--dd-space-5); align-items: center; }
+fieldset { border: 0; margin: 0; padding: 0; display: flex; gap: var(--dd-space-2); align-items: center; flex-wrap: wrap; }
+legend { float: inline-start; font-size: var(--dd-type-label-size); font-weight: 700; color: var(--dd-text-muted); margin-inline-end: var(--dd-space-1); }
+.seg { display: inline-flex; }
+.seg input { position: absolute; opacity: 0; pointer-events: none; }
+.seg label { --px-fill: var(--dd-surface); --px-line: var(--dd-border); padding: 6px 12px; cursor: pointer; font-size: var(--dd-type-small-size); font-weight: 600; margin-inline-start: -2px; }
+.seg input:checked + label { --px-fill: var(--dd-surface-tint); --px-line: var(--dd-outline); position: relative; z-index: 1; }
+.seg input:focus-visible + label { outline: 3px solid var(--dd-focus); outline-offset: 2px; }
+.check { display: inline-flex; gap: var(--dd-space-2); align-items: center; font-size: var(--dd-type-small-size); cursor: pointer; }
+.check input { width: 18px; height: 18px; accent-color: var(--dd-color-brand-forest); }
+
+/* grid */
+.legend { display: flex; flex-wrap: wrap; gap: var(--dd-space-2) var(--dd-space-4); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: var(--dd-space-3); }
+.cand { --px-fill: var(--dd-surface); --px-line: var(--dd-border); border: 0; padding: var(--dd-space-2) 4px var(--dd-space-1); display: grid; justify-items: center; gap: 2px; cursor: pointer; color: inherit; font: inherit; min-width: 0; }
+.cand:hover { --px-line: var(--dd-outline); }
+.cand.picked { --px-fill: var(--dd-surface-tint); --px-line: var(--dd-outline); }
+.cand.flagged { opacity: .55; }
+.cand canvas { width: 64px; height: 64px; }
+.cand .id { font-size: var(--dd-type-label-size); line-height: var(--dd-type-label-line); font-weight: 700; font-variant-numeric: tabular-nums; direction: ltr; }
+.cand .meta { display: flex; gap: 4px; min-height: 18px; }
+.tag { font-size: 11px; line-height: 16px; padding: 1px 6px; font-weight: 600; background: var(--dd-surface-sunken); color: var(--dd-text-muted); }
+.tag.warn { background: var(--dd-medal); color: var(--dd-on-medal); }
+.tag.slot-tag { background: var(--dd-primary); color: var(--dd-on-primary); }
+.tag.star { background: transparent; color: var(--dd-medal-text); padding-inline: 0; }
+.stage-light { background: var(--dd-color-green-50); }
+.stage-dark { background: var(--dd-color-brand-ink); }
+.stage-plate { background: var(--dd-color-green-800); }
+
+/* detail dialog */
+dialog { border: 0; padding: 0; background: transparent; color: var(--dd-text); max-width: min(40rem, calc(100vw - 32px)); width: 100%; }
+dialog::backdrop { background: var(--dd-scrim); }
+.sheet { --px-fill: var(--dd-surface); padding: var(--dd-space-5); display: grid; gap: var(--dd-space-4); max-height: calc(100vh - 48px); overflow: auto; }
+.sheet-head { display: flex; justify-content: space-between; align-items: start; gap: var(--dd-space-3); }
+.views { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--dd-space-2); }
+.view { display: grid; gap: 4px; justify-items: center; min-width: 0; }
+.view .stage { width: 100%; display: grid; place-items: center; padding-block: var(--dd-space-2); }
+.view canvas { width: 96px; height: 96px; max-width: 100%; }
+.view span { font-size: 11px; color: var(--dd-text-muted); text-align: center; }
+.assign { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--dd-space-2); }
+.assign button { --px-fill: var(--dd-surface); border: 0; font: inherit; font-size: var(--dd-type-small-size); font-weight: 700; color: var(--dd-text); padding: 8px 4px; cursor: pointer; min-height: 44px; }
+.assign button.on { --px-fill: var(--dd-primary); color: var(--dd-on-primary); }
+.notes-box { display: grid; gap: var(--dd-space-2); }
+textarea { font: inherit; color: var(--dd-text); background: var(--dd-surface); border: var(--dd-shape-border) solid var(--dd-border); padding: var(--dd-space-3); min-height: 5rem; resize: vertical; width: 100%; }
+textarea:focus { border-color: var(--dd-outline); outline: none; }
+.foot { display: grid; gap: var(--dd-space-2); max-width: 44rem; }
+.foot li { margin-block: 4px; }
+
+@media (max-width: 640px) {
+  .tray { position: static; }
+  .slots { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .assign { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid { grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); }
+}
+</style>
+
+<div class="wrap" dir="rtl" lang="fa">
+  <header>
+    <span>{{LOGO}}</span>
+    <h1>انتخاب کرکترهای انتشار اول</h1>
+    <p class="intro">۸۴ کرکتر کاندید از دو مجموعه‌ای که فرستادی، با دو پیشنهاد رنگ‌آمیزی برند. ۶ جایگاه انتشار اول (D-036) رو پر کن: دو کرکتر شروع، و کرکترهایی که در سطح ۳، ۵، ۸ و ۱۰ باز می‌شن. روی هر کرکتر بزن تا بزرگش رو در زمینه‌ی روشن و تیره ببینی.</p>
+  </header>
+
+  <section class="tray" aria-label="جایگاه‌های انتشار اول">
+    <div class="px-lift"><div class="px tray-inner">
+      <div class="slots" id="slots"></div>
+      <div class="tray-row">
+        <fieldset>
+          <legend>رنگ نهایی</legend>
+          <span class="seg" id="final-palette"></span>
+        </fieldset>
+        <div class="tray-row" style="gap: var(--dd-space-3)">
+          <span class="status" id="status" role="status" aria-live="polite"></span>
+          <span class="px-lift-low lift"><button class="px btn" id="save" type="button">ذخیره‌ی انتخاب</button></span>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="controls" aria-label="نمایش">
+    <fieldset><legend>رنگ</legend><span class="seg" id="palette"></span></fieldset>
+    <fieldset><legend>زمینه</legend><span class="seg" id="bg"></span></fieldset>
+    <fieldset><legend>مجموعه</legend><span class="seg" id="set"></span></fieldset>
+    <label class="check"><input type="checkbox" id="hide-flagged" checked> پنهان کردن موارد پرچم‌دار</label>
+    <label class="check"><input type="checkbox" id="animals"> فقط حیوان‌ها</label>
+    <label class="check"><input type="checkbox" id="stars"> فقط نشان‌شده‌ها ★</label>
+  </section>
+
+  <div class="legend muted">
+    <span><span class="tag warn">ترسناک</span> با لحن گرم برند جور نیست</span>
+    <span><span class="tag warn">Minecraft</span> ریسک حقوقی</span>
+    <span><span class="tag">حیوان</span> برچسب پیشنهادی Claude، نه قطعی</span>
+    <span id="count"></span>
+  </div>
+
+  <main class="grid" id="grid" aria-label="کرکترهای کاندید"></main>
+
+  <section class="notes-box">
+    <h2>یادداشت برای Claude</h2>
+    <label class="muted" for="notes">هر چیزی درباره‌ی انتخاب‌ها: اسم پیشنهادی، تغییر رنگ، کرکترهایی که برای بعد نگه داریم.</label>
+    <textarea id="notes" placeholder="مثلاً: روباه رو کرکتر شروع بذار، ولی نارنجیش بمونه"></textarea>
+  </section>
+
+  <section class="foot muted">
+    <h2 style="color: var(--dd-text)">قبل از نهایی شدن</h2>
+    <ul>
+      <li><b>لایسنس:</b> هر دو مجموعه از یک طراح و از سایت فروش تصویرن. استفاده داخل اپ و در آیتم‌های پولی اشتراک باید در لایسنس خریداری‌شده مجاز باشه.</li>
+      <li><b>نیم‌تنه:</b> کرکترها سر و شونه‌ان، نه بدن کامل. وسیله‌های مشترک روی همه نمی‌شینن؛ پیشنهاد جایگزین در <a href="https://claude.ai/artifact/UKKarSEFcVJJfPSsx2p6c8" target="_blank" rel="noopener">مجموعه‌ی اسناد</a>، سند کرکترها.</li>
+      <li><b>تم تیره:</b> خط دور شب روی زمینه‌ی تیره دیده نمی‌شه. کرکتر در تم تیره روی پلاک «جنگل تیره» می‌شینه (ستون سوم در نمای بزرگ).</li>
+    </ul>
+  </section>
+</div>
+
+<dialog id="detail" aria-labelledby="d-title" dir="rtl" lang="fa">
+  <div class="px-lift"><div class="px sheet">
+    <div class="sheet-head">
+      <div>
+        <h2 id="d-title"></h2>
+        <p class="muted" id="d-meta"></p>
+      </div>
+      <span class="px-lift-low lift"><button class="px btn secondary" id="d-close" type="button">بستن</button></span>
+    </div>
+    <div id="d-views" style="display: grid; gap: var(--dd-space-3)"></div>
+    <div>
+      <p class="muted" style="margin-block-end: var(--dd-space-2)">بذارش در جایگاه:</p>
+      <div class="assign" id="d-assign"></div>
+    </div>
+    <label class="check"><input type="checkbox" id="d-star"> نشانش کن برای مقایسه ★</label>
+  </div></div>
+</dialog>
+
+<script>
+const DATA = /*{{DATA}}*/null;
+const PALETTES = [
+  { key: "orig", label: "اصلی" },
+  { key: "brand5", label: "برند ۵ رنگ" },
+  { key: "extended", label: "برند گسترده" },
+];
+const BGS = [{ key: "light", label: "روشن" }, { key: "dark", label: "تیره" }, { key: "plate", label: "پلاک تیره" }];
+const SETS = [{ key: "all", label: "همه" }, { key: "a", label: "A" }, { key: "b", label: "B" }];
+const fa = (n) => String(n).replace(/\d/g, (d) => "۰۱۲۳۴۵۶۷۸۹"[d]);
+
+const state = {
+  palette: "brand5", bg: "light", set: "all", hideFlagged: true, animals: false, starsOnly: false,
+  slots: {}, finalPalette: "brand5", stars: [], notes: "", target: null,
+};
+let dirty = false;
+let db = null;
+
+const byId = Object.fromEntries(DATA.chars.map((c) => [c.id, c]));
+const $ = (id) => document.getElementById(id);
+
+function colorFor(idx, map) {
+  const hex = DATA.palette[idx];
+  return map === "orig" ? hex : DATA.maps[map][hex];
+}
+function draw(canvas, ch, scale, map) {
+  const n = 16;
+  canvas.width = n * scale; canvas.height = n * scale;
+  const g = canvas.getContext("2d");
+  g.clearRect(0, 0, canvas.width, canvas.height);
+  ch.rows.forEach((row, y) => {
+    for (let x = 0; x < row.length; x++) {
+      const c = row[x];
+      if (c === ".") continue;
+      g.fillStyle = colorFor(parseInt(c, 16), map);
+      g.fillRect(x * scale, y * scale, scale, scale);
+    }
+  });
+}
+function sprite(ch, scale, map, label) {
+  const cv = document.createElement("canvas");
+  cv.className = "pixelated";
+  cv.setAttribute("role", "img");
+  cv.setAttribute("aria-label", label || `کرکتر ${ch.label}`);
+  draw(cv, ch, scale, map);
+  return cv;
+}
+function slotOf(id) { return Object.keys(state.slots).find((k) => state.slots[k] === id); }
+function slotLabel(key) { return DATA.slots.find((s) => s.key === key).label; }
+
+function segmented(el, name, items, get, set) {
+  el.replaceChildren();
+  items.forEach((it) => {
+    const id = `${name}-${it.key}`;
+    const input = Object.assign(document.createElement("input"), { type: "radio", name, id, value: it.key, checked: get() === it.key });
+    input.addEventListener("change", () => { set(it.key); });
+    const label = Object.assign(document.createElement("label"), { htmlFor: id, className: "px px-sm", textContent: it.label });
+    el.append(input, label);
+  });
+}
+
+function renderSlots() {
+  const el = $("slots");
+  el.replaceChildren();
+  DATA.slots.forEach((s) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    const id = state.slots[s.key];
+    b.className = "px slot" + (id ? " filled" : "") + (state.target === s.key ? " target" : "");
+    b.setAttribute("aria-label", `${s.label}: ${id ? byId[id].label : "خالی"}`);
+    if (id) b.append(sprite(byId[id], 3, state.finalPalette));
+    else b.append(Object.assign(document.createElement("span"), { className: "empty", textContent: "+" }));
+    b.append(Object.assign(document.createElement("b"), { textContent: s.label }));
+    b.append(Object.assign(document.createElement("small"), { textContent: id ? byId[id].label : s.hint }));
+    b.addEventListener("click", () => { if (id) openDetail(id); else { state.target = state.target === s.key ? null : s.key; renderSlots(); } });
+    el.append(b);
+  });
+}
+
+function visible(c) {
+  if (state.set !== "all" && c.set !== state.set) return false;
+  if (state.hideFlagged && c.flags.length && !slotOf(c.id)) return false;
+  if (state.animals && !c.tags.includes("حیوان")) return false;
+  if (state.starsOnly && !state.stars.includes(c.id)) return false;
+  return true;
+}
+
+function renderGrid() {
+  const el = $("grid");
+  el.replaceChildren();
+  const stage = { light: "stage-light", dark: "stage-dark", plate: "stage-plate" }[state.bg];
+  let shown = 0;
+  DATA.chars.forEach((c) => {
+    if (!visible(c)) return;
+    shown++;
+    const b = document.createElement("button");
+    b.type = "button";
+    const s = slotOf(c.id);
+    b.className = "px cand" + (s ? " picked" : "") + (c.flags.length ? " flagged" : "");
+    b.setAttribute("aria-label", `${c.label}${s ? "، در جایگاه " + slotLabel(s) : ""}`);
+    const box = document.createElement("span");
+    box.className = stage;
+    box.style.cssText = "display:grid;place-items:center;width:72px;height:72px";
+    box.append(sprite(c, 4, state.palette));
+    const id = Object.assign(document.createElement("span"), { className: "id", textContent: c.label });
+    const meta = document.createElement("span");
+    meta.className = "meta";
+    if (s) meta.append(Object.assign(document.createElement("span"), { className: "tag slot-tag", textContent: slotLabel(s) }));
+    c.flags.forEach((f) => meta.append(Object.assign(document.createElement("span"), { className: "tag warn", textContent: f })));
+    if (!s) c.tags.forEach((t) => meta.append(Object.assign(document.createElement("span"), { className: "tag", textContent: t })));
+    if (state.stars.includes(c.id)) meta.append(Object.assign(document.createElement("span"), { className: "tag star", textContent: "★" }));
+    b.append(box, id, meta);
+    b.addEventListener("click", () => {
+      if (state.target) { assign(state.target, c.id); state.target = null; renderAll(); }
+      else openDetail(c.id);
+    });
+    el.append(b);
+  });
+  $("count").textContent = `${fa(shown)} از ${fa(DATA.chars.length)} کرکتر نمایش داده شده`;
+}
+
+function assign(slot, id) {
+  Object.keys(state.slots).forEach((k) => { if (state.slots[k] === id) delete state.slots[k]; });
+  if (slot) state.slots[slot] = id;
+  markDirty();
+}
+
+let current = null;
+function openDetail(id) {
+  current = id;
+  const c = byId[id];
+  $("d-title").textContent = `کرکتر ${c.label}`;
+  const bits = [`مجموعه‌ی ${c.set.toUpperCase()}، شماره‌ی ${fa(c.n)}`];
+  if (c.flags.length) bits.push("پرچم: " + c.flags.join("، "));
+  if (c.tags.length) bits.push(c.tags.join("، ") + " (پیشنهادی)");
+  $("d-meta").textContent = bits.join(" · ");
+  const views = $("d-views");
+  views.replaceChildren();
+  PALETTES.forEach((p) => {
+    const row = document.createElement("div");
+    row.innerHTML = `<p class="muted" style="margin-block-end:4px;font-weight:700">${p.label}</p>`;
+    const grid = document.createElement("div");
+    grid.className = "views";
+    BGS.forEach((bg) => {
+      const v = document.createElement("div");
+      v.className = "view";
+      const st = document.createElement("div");
+      st.className = "stage stage-" + bg.key;
+      st.append(sprite(c, 6, p.key, `${c.label}، ${p.label}، زمینه‌ی ${bg.label}`));
+      v.append(st, Object.assign(document.createElement("span"), { textContent: bg.label }));
+      grid.append(v);
+    });
+    row.append(grid);
+    views.append(row);
+  });
+  renderAssign();
+  $("d-star").checked = state.stars.includes(id);
+  const dlg = $("detail");
+  if (!dlg.open) dlg.showModal();
+}
+function renderAssign() {
+  const el = $("d-assign");
+  el.replaceChildren();
+  const s = slotOf(current);
+  DATA.slots.forEach((sl) => {
+    const holder = state.slots[sl.key];
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "px" + (s === sl.key ? " on" : "");
+    b.textContent = sl.label + (holder && holder !== current ? ` (الان: ${byId[holder].label})` : "");
+    b.setAttribute("aria-pressed", s === sl.key);
+    b.addEventListener("click", () => { assign(s === sl.key ? null : sl.key, current); renderAssign(); renderAll(); });
+    el.append(b);
+  });
+}
+$("d-close").addEventListener("click", () => $("detail").close());
+$("detail").addEventListener("click", (e) => { if (e.target === $("detail")) $("detail").close(); });
+$("d-star").addEventListener("change", (e) => {
+  state.stars = state.stars.filter((x) => x !== current);
+  if (e.target.checked) state.stars.push(current);
+  markDirty(); renderGrid();
+});
+
+function renderAll() { renderSlots(); renderGrid(); }
+
+function setStatus(text, kind) { const s = $("status"); s.textContent = text; s.className = "status" + (kind ? " " + kind : ""); }
+function markDirty() {
+  dirty = true;
+  setStatus("تغییرها ذخیره نشده");
+  try { localStorage.setItem("didit-character-picks", JSON.stringify(payload())); } catch (e) {}
+}
+function payload() {
+  return { slots: { ...state.slots }, finalPalette: state.finalPalette, stars: [...state.stars], notes: state.notes };
+}
+function apply(p) {
+  p = p || {};
+  state.slots = { ...(p.slots || {}) };
+  Object.keys(state.slots).forEach((k) => { if (!byId[state.slots[k]]) delete state.slots[k]; });
+  state.finalPalette = p.finalPalette || "brand5";
+  state.stars = (p.stars || []).filter((id) => byId[id]);
+  state.notes = p.notes || "";
+  $("notes").value = state.notes;
+  segmented($("final-palette"), "final", PALETTES, () => state.finalPalette, (k) => { state.finalPalette = k; markDirty(); renderSlots(); });
+  renderAll();
+}
+
+$("save").addEventListener("click", async () => {
+  if (!db) { setStatus("فقط در همین مرورگر ذخیره شد؛ برای Claude بفرست که انتخاب کردی", "ok"); dirty = false; return; }
+  $("save").disabled = true;
+  setStatus("در حال ذخیره…");
+  try {
+    await db.doc("picks/current").set({ ...payload(), savedAt: new Date().toISOString() });
+    dirty = false;
+    setStatus("ذخیره شد. Claude می‌تونه انتخابت رو بخونه.", "ok");
+  } catch (e) {
+    setStatus(e && e.code === "invalid_argument" ? "اجازه‌ی ذخیره نداری؛ فقط صاحب صفحه ذخیره می‌کنه" : "ذخیره نشد. دوباره امتحان کن.", "err");
+  } finally { $("save").disabled = false; }
+});
+
+let notesTimer;
+$("notes").addEventListener("input", (e) => { state.notes = e.target.value; clearTimeout(notesTimer); notesTimer = setTimeout(markDirty, 400); });
+$("hide-flagged").addEventListener("change", (e) => { state.hideFlagged = e.target.checked; renderGrid(); });
+$("animals").addEventListener("change", (e) => { state.animals = e.target.checked; renderGrid(); });
+$("stars").addEventListener("change", (e) => { state.starsOnly = e.target.checked; renderGrid(); });
+segmented($("palette"), "palette", PALETTES, () => state.palette, (k) => { state.palette = k; renderGrid(); });
+segmented($("bg"), "bg", BGS, () => state.bg, (k) => { state.bg = k; renderGrid(); });
+segmented($("set"), "set", SETS, () => state.set, (k) => { state.set = k; renderGrid(); });
+
+let local = null;
+try { local = JSON.parse(localStorage.getItem("didit-character-picks") || "null"); } catch (e) {}
+apply(local);
+setStatus(local ? "پیش‌نویس این مرورگر" : "هنوز چیزی انتخاب نشده");
+
+(async () => {
+  try { db = window.claude ? await window.claude.use("db") : null; } catch (e) { db = null; }
+  if (!db) { setStatus("ذخیره فقط در همین مرورگر کار می‌کنه"); return; }
+  db.doc("picks/current").onSnapshot((snap) => {
+    if (snap.exists && !dirty) { apply(snap.data()); setStatus("انتخاب ذخیره‌شده بارگذاری شد", "ok"); }
+  }, () => {});
+})();
+</script>

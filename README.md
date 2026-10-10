@@ -36,13 +36,18 @@
 | [پرسشنامه](docs/04-research/survey.md) | پرسشنامه‌ی آماده برای پرسلاین و برنامه‌ی تحلیل |
 | [نتایج پرسشنامه و بینش‌ها](docs/04-research/survey-results.md) | تحلیل ۳۳ پاسخ، بینش‌ها و پیشنهادها |
 | [آنالیز رقبا](docs/05-competitors/competitor-analysis.md) | رقبای جهانی و ایرانی، ماتریس ویژگی‌ها، قیمت، آنبوردینگ، نظرات کاربران، فرصت‌ها و پیام تمایز |
-| [جمع‌بندی شواهد](docs/06-design-thinking/research-synthesis.md) | ده موضوع از شواهد و هفت اصل طراحی (پیش‌نویس) |
-| [پرسوناها](docs/06-design-thinking/personas.md) | سه پرسونای رفتاری با Empathy Map (پیش‌نویس) |
-| [سفر کاربر](docs/06-design-thinking/journey-map.md) | ۳۰ روز اول و لحظه‌های حیاتی (پیش‌نویس) |
-| [مسئله‌ها و ایده‌ها](docs/06-design-thinking/hmw.md) | بیانیه‌ی مسئله، How Might We و ایده‌ها (پیش‌نویس) |
-| [فلوهای کاربر](docs/06-design-thinking/user-flows.md) | نُه فلوی حیاتی با نمودار و فهرست نوتیفیکیشن‌ها (پیش‌نویس) |
-| [معماری اطلاعات](docs/06-design-thinking/information-architecture.md) | ناوبری، صفحه‌ها و ورودی دیزاین سیستم (پیش‌نویس) |
-| [درخت دسته‌ها](docs/06-design-thinking/category-tree.md) | دسته‌ها و قالب‌های سؤال (پیش‌نویس) |
+| [جمع‌بندی شواهد](docs/06-design-thinking/research-synthesis.md) | ده موضوع از شواهد و هفت اصل طراحی |
+| [پرسوناها](docs/06-design-thinking/personas.md) | سه پرسونای رفتاری با Empathy Map |
+| [سفر کاربر](docs/06-design-thinking/journey-map.md) | ۳۰ روز اول و لحظه‌های حیاتی |
+| [مسئله‌ها و ایده‌ها](docs/06-design-thinking/hmw.md) | بیانیه‌ی مسئله، How Might We و ایده‌ها |
+| [فلوهای کاربر](docs/06-design-thinking/user-flows.md) | نُه فلوی حیاتی با نمودار و فهرست نوتیفیکیشن‌ها |
+| [معماری اطلاعات](docs/06-design-thinking/information-architecture.md) | ناوبری، صفحه‌ها و ورودی دیزاین سیستم |
+| [درخت دسته‌ها](docs/06-design-thinking/category-tree.md) | دسته‌ها و قالب‌های سؤال |
+| [دیزاین سیستم](docs/07-design-system/design-system.md) | اصول، Atomic Design، قاعده‌ی پیکسلی ترکیبی و نقشه‌ی فایل‌ها (پیش‌نویس) |
+| [پایه‌های دیزاین سیستم](docs/07-design-system/foundations.md) | رنگ، تایپوگرافی، اعداد پیکسلی، فاصله، شکل، حرکت و آیکون (پیش‌نویس) |
+| [کامپوننت‌ها](docs/07-design-system/components.md) | ۴۴ کامپوننت از اتم تا قالب ([صفحه‌ی تعاملی](https://claude.ai/artifact/3sSuWEtZGgnKJcAGbh33Kt)) (پیش‌نویس) |
+| [راست‌به‌چپ، تم تیره و دسترس‌پذیری](docs/07-design-system/accessibility.md) | قواعد جهت، تم، کنتراست و صفحه‌خوان (پیش‌نویس) |
+| [کرکترها](docs/07-design-system/characters.md) | انتخاب و استفاده‌ی کرکترها ([صفحه‌ی انتخاب](https://claude.ai/artifact/JM4KBx5EyVazMasQeogWsv)) (پیش‌نویس) |
 
 ## مشخصات کلی
 

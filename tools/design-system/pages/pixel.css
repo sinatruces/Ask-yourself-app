@@ -1,0 +1,33 @@
+/* Didit pixel primitives for HTML pages (same rules as the Flutter components).
+   .px          stepped-corner box: outline 2px (--px-line), fill (--px-fill)
+   .px-sm       smaller step for chips and cells
+   .px-lift     wrapper that adds the hard shadow straight down (filter, so it follows the stair shape) */
+.px {
+  --px-line: var(--dd-outline);
+  --px-fill: var(--dd-surface);
+  position: relative;
+  isolation: isolate;
+  background: var(--px-line);
+  clip-path: polygon(4px 0, calc(100% - 4px) 0, calc(100% - 4px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 4px, 100% 4px,
+    100% calc(100% - 4px), calc(100% - 2px) calc(100% - 4px), calc(100% - 2px) calc(100% - 2px), calc(100% - 4px) calc(100% - 2px),
+    calc(100% - 4px) 100%, 4px 100%, 4px calc(100% - 2px), 2px calc(100% - 2px), 2px calc(100% - 4px), 0 calc(100% - 4px),
+    0 4px, 2px 4px, 2px 2px, 4px 2px);
+}
+.px::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  z-index: -1;
+  background: var(--px-fill);
+  clip-path: polygon(2px 0, calc(100% - 2px) 0, calc(100% - 2px) 2px, 100% 2px, 100% calc(100% - 2px), calc(100% - 2px) calc(100% - 2px),
+    calc(100% - 2px) 100%, 2px 100%, 2px calc(100% - 2px), 0 calc(100% - 2px), 0 2px, 2px 2px);
+}
+.px-sm {
+  clip-path: polygon(2px 0, calc(100% - 2px) 0, calc(100% - 2px) 2px, 100% 2px, 100% calc(100% - 2px), calc(100% - 2px) calc(100% - 2px),
+    calc(100% - 2px) 100%, 2px 100%, 2px calc(100% - 2px), 0 calc(100% - 2px), 0 2px, 2px 2px);
+}
+.px-sm::before { clip-path: none; }
+.px-lift { filter: drop-shadow(0 var(--dd-elevation-rest) 0 var(--dd-shadow)); }
+.px-lift-low { filter: drop-shadow(0 var(--dd-elevation-low) 0 var(--dd-shadow)); }
+.pixelated { image-rendering: pixelated; image-rendering: crisp-edges; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }

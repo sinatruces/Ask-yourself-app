@@ -52,9 +52,14 @@ PAGES = [
     ("information-architecture", "docs/06-design-thinking/information-architecture.md", "تفکر طراحی", "ناوبری، ۲۴ صفحه، ترتیب صفحه‌ی اصلی و ورودی دیزاین سیستم"),
     ("category-tree", "docs/06-design-thinking/category-tree.md", "تفکر طراحی", "دوازده دسته‌ی مادر، زیردسته‌ها و حدود ۶۰ قالب سؤال"),
     ("competitors", "docs/05-competitors/competitor-analysis.md", "رقبا", "رقبای جهانی و ایرانی، ماتریس ویژگی‌ها، قیمت، آنبوردینگ، نظرات کاربران و فرصت‌ها"),
+    ("design-system", "docs/07-design-system/design-system.md", "دیزاین سیستم", "اصول، ساختار Atomic Design، قاعده‌ی پیکسلی ترکیبی و نقشه‌ی فایل‌ها"),
+    ("foundations", "docs/07-design-system/foundations.md", "دیزاین سیستم", "نقش‌های رنگ، تایپوگرافی، اعداد پیکسلی، فاصله، شکل، حرکت و آیکون‌ها"),
+    ("components", "docs/07-design-system/components.md", "دیزاین سیستم", "۴۴ کامپوننت از اتم تا قالب، با حالت‌ها و توکن‌ها"),
+    ("accessibility", "docs/07-design-system/accessibility.md", "دیزاین سیستم", "راست‌به‌چپ، تم تیره، کنتراست و صفحه‌خوان"),
+    ("characters", "docs/07-design-system/characters.md", "دیزاین سیستم", "انتخاب کرکترها، رنگ‌آمیزی برند، اندازه‌ها و انیمیشن‌ها"),
 ]
 EXTERNAL = {"docs/02-brand/visual-identity.md": IDENTITY_URL}
-GROUPS = ["پایه", "استراتژی", "برند", "محصول", "تحقیق", "رقبا", "تفکر طراحی"]
+GROUPS = ["پایه", "استراتژی", "برند", "محصول", "تحقیق", "رقبا", "تفکر طراحی", "دیزاین سیستم"]
 
 FA_DIGITS = str.maketrans("0123456789", "۰۱۲۳۴۵۶۷۸۹")
 

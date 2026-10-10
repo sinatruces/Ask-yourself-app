@@ -1,0 +1,912 @@
+{
+  "color.brand.ink": {
+    "type": "color",
+    "value": "#061720",
+    "description": "شب — from logo outline"
+  },
+  "color.brand.leaf": {
+    "type": "color",
+    "value": "#85C06C",
+    "description": "برگ — from logo body"
+  },
+  "color.brand.sprout": {
+    "type": "color",
+    "value": "#DFF8CF",
+    "description": "جوانه — from logo highlight"
+  },
+  "color.brand.forest": {
+    "type": "color",
+    "value": "#346856",
+    "description": "جنگل — completes the palette; accessible green text on light"
+  },
+  "color.green.50": {
+    "type": "color",
+    "value": "#F1FCEA",
+    "description": ""
+  },
+  "color.green.100": {
+    "type": "color",
+    "value": "#DFF8CF",
+    "description": ""
+  },
+  "color.green.200": {
+    "type": "color",
+    "value": "#BBE2A8",
+    "description": ""
+  },
+  "color.green.300": {
+    "type": "color",
+    "value": "#9ED088",
+    "description": ""
+  },
+  "color.green.400": {
+    "type": "color",
+    "value": "#85C06C",
+    "description": ""
+  },
+  "color.green.500": {
+    "type": "color",
+    "value": "#659E65",
+    "description": ""
+  },
+  "color.green.600": {
+    "type": "color",
+    "value": "#4C825E",
+    "description": ""
+  },
+  "color.green.700": {
+    "type": "color",
+    "value": "#346856",
+    "description": ""
+  },
+  "color.green.800": {
+    "type": "color",
+    "value": "#1D423D",
+    "description": ""
+  },
+  "color.green.900": {
+    "type": "color",
+    "value": "#102A2D",
+    "description": ""
+  },
+  "color.neutral.50": {
+    "type": "color",
+    "value": "#F3F8FA",
+    "description": ""
+  },
+  "color.neutral.100": {
+    "type": "color",
+    "value": "#E8EEF1",
+    "description": ""
+  },
+  "color.neutral.200": {
+    "type": "color",
+    "value": "#D6DEE3",
+    "description": ""
+  },
+  "color.neutral.300": {
+    "type": "color",
+    "value": "#B9C3C9",
+    "description": ""
+  },
+  "color.neutral.400": {
+    "type": "color",
+    "value": "#95A0A7",
+    "description": ""
+  },
+  "color.neutral.500": {
+    "type": "color",
+    "value": "#758188",
+    "description": ""
+  },
+  "color.neutral.600": {
+    "type": "color",
+    "value": "#58656D",
+    "description": ""
+  },
+  "color.neutral.700": {
+    "type": "color",
+    "value": "#3C4A52",
+    "description": ""
+  },
+  "color.neutral.800": {
+    "type": "color",
+    "value": "#223038",
+    "description": ""
+  },
+  "color.neutral.900": {
+    "type": "color",
+    "value": "#0F1E26",
+    "description": ""
+  },
+  "color.semantic.medal": {
+    "type": "color",
+    "value": "#F2B33D",
+    "description": "طلا — medals and achievements (approved, D-030)"
+  },
+  "color.semantic.medal-text": {
+    "type": "color",
+    "value": "#8A5A00",
+    "description": "medal text on light backgrounds (approved)"
+  },
+  "color.semantic.error": {
+    "type": "color",
+    "value": "#B83A30",
+    "description": "system errors only, never for \"no\" (approved, D-030)"
+  },
+  "color.semantic.error-dark": {
+    "type": "color",
+    "value": "#FF8A7A",
+    "description": "error on dark theme (approved)"
+  },
+  "theme.light.bg": {
+    "type": "color",
+    "value": "#F1FCEA",
+    "description": ""
+  },
+  "theme.light.surface": {
+    "type": "color",
+    "value": "#FFFFFF",
+    "description": ""
+  },
+  "theme.light.surface-tint": {
+    "type": "color",
+    "value": "#DFF8CF",
+    "description": ""
+  },
+  "theme.light.text": {
+    "type": "color",
+    "value": "#061720",
+    "description": ""
+  },
+  "theme.light.text-muted": {
+    "type": "color",
+    "value": "#58656D",
+    "description": ""
+  },
+  "theme.light.outline": {
+    "type": "color",
+    "value": "#061720",
+    "description": ""
+  },
+  "theme.light.border": {
+    "type": "color",
+    "value": "#D6DEE3",
+    "description": ""
+  },
+  "theme.light.primary": {
+    "type": "color",
+    "value": "#85C06C",
+    "description": ""
+  },
+  "theme.light.on-primary": {
+    "type": "color",
+    "value": "#061720",
+    "description": ""
+  },
+  "theme.light.primary-pressed": {
+    "type": "color",
+    "value": "#659E65",
+    "description": ""
+  },
+  "theme.light.yes": {
+    "type": "color",
+    "value": "#85C06C",
+    "description": ""
+  },
+  "theme.light.yes-text": {
+    "type": "color",
+    "value": "#346856",
+    "description": ""
+  },
+  "theme.light.no-text": {
+    "type": "color",
+    "value": "#58656D",
+    "description": ""
+  },
+  "theme.light.no-border": {
+    "type": "color",
+    "value": "#758188",
+    "description": ""
+  },
+  "theme.light.focus": {
+    "type": "color",
+    "value": "#061720",
+    "description": ""
+  },
+  "theme.light.medal": {
+    "type": "color",
+    "value": "#F2B33D",
+    "description": ""
+  },
+  "theme.light.medal-text": {
+    "type": "color",
+    "value": "#8A5A00",
+    "description": ""
+  },
+  "theme.light.error": {
+    "type": "color",
+    "value": "#B83A30",
+    "description": ""
+  },
+  "theme.light.surface-sunken": {
+    "type": "color",
+    "value": "#E8EEF1",
+    "description": "tracks, inactive cells"
+  },
+  "theme.light.surface-pressed": {
+    "type": "color",
+    "value": "#DFF8CF",
+    "description": ""
+  },
+  "theme.light.track": {
+    "type": "color",
+    "value": "#D6DEE3",
+    "description": "empty part of bars and rings"
+  },
+  "theme.light.scrim": {
+    "type": "color",
+    "value": "#0617207A",
+    "description": "behind sheets and dialogs (شب، ۴۸٪)"
+  },
+  "theme.light.disabled-bg": {
+    "type": "color",
+    "value": "#E8EEF1",
+    "description": ""
+  },
+  "theme.light.disabled-text": {
+    "type": "color",
+    "value": "#758188",
+    "description": ""
+  },
+  "theme.light.chain-yes": {
+    "type": "color",
+    "value": "#85C06C",
+    "description": ""
+  },
+  "theme.light.chain-freeze": {
+    "type": "color",
+    "value": "#DFF8CF",
+    "description": ""
+  },
+  "theme.light.chain-no": {
+    "type": "color",
+    "value": "#D6DEE3",
+    "description": ""
+  },
+  "theme.light.chain-off": {
+    "type": "color",
+    "value": "#E8EEF1",
+    "description": "day not scheduled"
+  },
+  "theme.light.xp-fill": {
+    "type": "color",
+    "value": "#F2B33D",
+    "description": ""
+  },
+  "theme.light.on-medal": {
+    "type": "color",
+    "value": "#061720",
+    "description": ""
+  },
+  "theme.light.highlight": {
+    "type": "color",
+    "value": "#DFF8CF",
+    "description": "2dp top light on primary buttons (from the logo)"
+  },
+  "theme.light.shadow": {
+    "type": "color",
+    "value": "#061720",
+    "description": "hard pixel shadow"
+  },
+  "theme.dark.bg": {
+    "type": "color",
+    "value": "#061720",
+    "description": ""
+  },
+  "theme.dark.surface": {
+    "type": "color",
+    "value": "#0F1E26",
+    "description": ""
+  },
+  "theme.dark.surface-tint": {
+    "type": "color",
+    "value": "#1D423D",
+    "description": ""
+  },
+  "theme.dark.text": {
+    "type": "color",
+    "value": "#DFF8CF",
+    "description": ""
+  },
+  "theme.dark.text-muted": {
+    "type": "color",
+    "value": "#B9C3C9",
+    "description": ""
+  },
+  "theme.dark.outline": {
+    "type": "color",
+    "value": "#4C825E",
+    "description": "overrides brand #000000: black outline and dark surface are under 3:1 on شب (WCAG 1.4.11); green like the on-dark logo outline"
+  },
+  "theme.dark.border": {
+    "type": "color",
+    "value": "#3C4A52",
+    "description": ""
+  },
+  "theme.dark.primary": {
+    "type": "color",
+    "value": "#85C06C",
+    "description": ""
+  },
+  "theme.dark.on-primary": {
+    "type": "color",
+    "value": "#061720",
+    "description": ""
+  },
+  "theme.dark.primary-pressed": {
+    "type": "color",
+    "value": "#9ED088",
+    "description": ""
+  },
+  "theme.dark.yes": {
+    "type": "color",
+    "value": "#85C06C",
+    "description": ""
+  },
+  "theme.dark.yes-text": {
+    "type": "color",
+    "value": "#85C06C",
+    "description": ""
+  },
+  "theme.dark.no-text": {
+    "type": "color",
+    "value": "#B9C3C9",
+    "description": ""
+  },
+  "theme.dark.no-border": {
+    "type": "color",
+    "value": "#758188",
+    "description": ""
+  },
+  "theme.dark.focus": {
+    "type": "color",
+    "value": "#DFF8CF",
+    "description": ""
+  },
+  "theme.dark.medal": {
+    "type": "color",
+    "value": "#F2B33D",
+    "description": ""
+  },
+  "theme.dark.medal-text": {
+    "type": "color",
+    "value": "#F2B33D",
+    "description": ""
+  },
+  "theme.dark.error": {
+    "type": "color",
+    "value": "#FF8A7A",
+    "description": ""
+  },
+  "theme.dark.surface-sunken": {
+    "type": "color",
+    "value": "#223038",
+    "description": ""
+  },
+  "theme.dark.surface-pressed": {
+    "type": "color",
+    "value": "#102A2D",
+    "description": ""
+  },
+  "theme.dark.track": {
+    "type": "color",
+    "value": "#3C4A52",
+    "description": ""
+  },
+  "theme.dark.scrim": {
+    "type": "color",
+    "value": "#000000A3",
+    "description": ""
+  },
+  "theme.dark.disabled-bg": {
+    "type": "color",
+    "value": "#223038",
+    "description": ""
+  },
+  "theme.dark.disabled-text": {
+    "type": "color",
+    "value": "#758188",
+    "description": ""
+  },
+  "theme.dark.chain-yes": {
+    "type": "color",
+    "value": "#85C06C",
+    "description": ""
+  },
+  "theme.dark.chain-freeze": {
+    "type": "color",
+    "value": "#1D423D",
+    "description": ""
+  },
+  "theme.dark.chain-no": {
+    "type": "color",
+    "value": "#3C4A52",
+    "description": ""
+  },
+  "theme.dark.chain-off": {
+    "type": "color",
+    "value": "#223038",
+    "description": ""
+  },
+  "theme.dark.xp-fill": {
+    "type": "color",
+    "value": "#F2B33D",
+    "description": ""
+  },
+  "theme.dark.on-medal": {
+    "type": "color",
+    "value": "#061720",
+    "description": ""
+  },
+  "theme.dark.highlight": {
+    "type": "color",
+    "value": "#DFF8CF",
+    "description": ""
+  },
+  "theme.dark.shadow": {
+    "type": "color",
+    "value": "#000000",
+    "description": ""
+  },
+  "pixel.unit": {
+    "type": "dimension",
+    "value": "4px",
+    "description": "one 'pixel' of the brand grid; all spacing and sizes are multiples"
+  },
+  "pixel.outline-width": {
+    "type": "dimension",
+    "value": "2px",
+    "description": ""
+  },
+  "pixel.shadow-offset": {
+    "type": "dimension",
+    "value": "4px",
+    "description": "hard drop downward, no blur — like the thick base of the logo check"
+  },
+  "pixel.radius": {
+    "type": "dimension",
+    "value": "0px",
+    "description": "no rounded corners; use stepped (notched) corners instead"
+  },
+  "font.family": {
+    "type": "fontFamily",
+    "value": [
+      "Estedad",
+      "Tahoma",
+      "sans-serif"
+    ],
+    "description": ""
+  },
+  "space.0": {
+    "type": "dimension",
+    "value": "0px",
+    "description": ""
+  },
+  "space.1": {
+    "type": "dimension",
+    "value": "4px",
+    "description": ""
+  },
+  "space.2": {
+    "type": "dimension",
+    "value": "8px",
+    "description": ""
+  },
+  "space.3": {
+    "type": "dimension",
+    "value": "12px",
+    "description": ""
+  },
+  "space.4": {
+    "type": "dimension",
+    "value": "16px",
+    "description": "screen side margin"
+  },
+  "space.5": {
+    "type": "dimension",
+    "value": "20px",
+    "description": ""
+  },
+  "space.6": {
+    "type": "dimension",
+    "value": "24px",
+    "description": ""
+  },
+  "space.8": {
+    "type": "dimension",
+    "value": "32px",
+    "description": ""
+  },
+  "space.10": {
+    "type": "dimension",
+    "value": "40px",
+    "description": ""
+  },
+  "space.12": {
+    "type": "dimension",
+    "value": "48px",
+    "description": ""
+  },
+  "space.16": {
+    "type": "dimension",
+    "value": "64px",
+    "description": ""
+  },
+  "size.touch-min": {
+    "type": "dimension",
+    "value": "48px",
+    "description": "minimum touch target"
+  },
+  "size.icon.md": {
+    "type": "dimension",
+    "value": "24px",
+    "description": "1 icon pixel = 2dp"
+  },
+  "size.icon.lg": {
+    "type": "dimension",
+    "value": "36px",
+    "description": "1 icon pixel = 3dp"
+  },
+  "size.icon.xl": {
+    "type": "dimension",
+    "value": "48px",
+    "description": "1 icon pixel = 4dp"
+  },
+  "size.numeral-unit.sm": {
+    "type": "dimension",
+    "value": "3px",
+    "description": "pixel numeral 21dp tall"
+  },
+  "size.numeral-unit.md": {
+    "type": "dimension",
+    "value": "4px",
+    "description": "28dp tall"
+  },
+  "size.numeral-unit.lg": {
+    "type": "dimension",
+    "value": "6px",
+    "description": "42dp tall"
+  },
+  "size.numeral-unit.xl": {
+    "type": "dimension",
+    "value": "8px",
+    "description": "56dp tall"
+  },
+  "size.character.sm": {
+    "type": "dimension",
+    "value": "48px",
+    "description": "16px sprite x3"
+  },
+  "size.character.md": {
+    "type": "dimension",
+    "value": "96px",
+    "description": "x6"
+  },
+  "size.character.lg": {
+    "type": "dimension",
+    "value": "160px",
+    "description": "x10"
+  },
+  "size.content-max": {
+    "type": "dimension",
+    "value": "480px",
+    "description": "content width on tablets"
+  },
+  "shape.notch": {
+    "type": "dimension",
+    "value": "4px",
+    "description": "stepped corner: one 4dp square cut from each corner"
+  },
+  "shape.notch-sm": {
+    "type": "dimension",
+    "value": "2px",
+    "description": "chips and small cells"
+  },
+  "shape.outline": {
+    "type": "dimension",
+    "value": "2px",
+    "description": ""
+  },
+  "shape.border": {
+    "type": "dimension",
+    "value": "2px",
+    "description": "plain fields and dividers use border color, square corners"
+  },
+  "shape.divider": {
+    "type": "dimension",
+    "value": "1px",
+    "description": ""
+  },
+  "elevation.rest": {
+    "type": "dimension",
+    "value": "4px",
+    "description": "hard shadow straight down, no blur"
+  },
+  "elevation.low": {
+    "type": "dimension",
+    "value": "2px",
+    "description": "chips, small cells"
+  },
+  "elevation.pressed": {
+    "type": "dimension",
+    "value": "0px",
+    "description": "component moves down by rest offset, shadow disappears"
+  },
+  "type.display": {
+    "type": "typography",
+    "value": {
+      "fontSize": "32px",
+      "lineHeight": "44px",
+      "fontWeight": 900
+    },
+    "description": ""
+  },
+  "type.question": {
+    "type": "typography",
+    "value": {
+      "fontSize": "22px",
+      "lineHeight": "36px",
+      "fontWeight": 800
+    },
+    "description": ""
+  },
+  "type.title-1": {
+    "type": "typography",
+    "value": {
+      "fontSize": "20px",
+      "lineHeight": "32px",
+      "fontWeight": 700
+    },
+    "description": ""
+  },
+  "type.title-2": {
+    "type": "typography",
+    "value": {
+      "fontSize": "17px",
+      "lineHeight": "28px",
+      "fontWeight": 700
+    },
+    "description": ""
+  },
+  "type.answer": {
+    "type": "typography",
+    "value": {
+      "fontSize": "18px",
+      "lineHeight": "28px",
+      "fontWeight": 800
+    },
+    "description": "yes/no buttons"
+  },
+  "type.button": {
+    "type": "typography",
+    "value": {
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "fontWeight": 700
+    },
+    "description": ""
+  },
+  "type.body": {
+    "type": "typography",
+    "value": {
+      "fontSize": "15px",
+      "lineHeight": "26px",
+      "fontWeight": 400
+    },
+    "description": ""
+  },
+  "type.small": {
+    "type": "typography",
+    "value": {
+      "fontSize": "13px",
+      "lineHeight": "22px",
+      "fontWeight": 500
+    },
+    "description": ""
+  },
+  "type.label": {
+    "type": "typography",
+    "value": {
+      "fontSize": "12px",
+      "lineHeight": "20px",
+      "fontWeight": 600
+    },
+    "description": ""
+  },
+  "motion.duration.instant": {
+    "type": "duration",
+    "value": "0ms",
+    "description": ""
+  },
+  "motion.duration.fast": {
+    "type": "duration",
+    "value": "80ms",
+    "description": "press, toggle"
+  },
+  "motion.duration.base": {
+    "type": "duration",
+    "value": "120ms",
+    "description": "state change, chip"
+  },
+  "motion.duration.slow": {
+    "type": "duration",
+    "value": "200ms",
+    "description": "sheet, card enter"
+  },
+  "motion.duration.check": {
+    "type": "duration",
+    "value": "480ms",
+    "description": "signature: check builds pixel by pixel after yes"
+  },
+  "motion.duration.celebrate": {
+    "type": "duration",
+    "value": "1200ms",
+    "description": "level and medal moments"
+  },
+  "motion.steps.short": {
+    "type": "number",
+    "value": 2,
+    "description": "steps() count for fast/base"
+  },
+  "motion.steps.long": {
+    "type": "number",
+    "value": 4,
+    "description": "steps() count for slow"
+  },
+  "motion.sprite-fps": {
+    "type": "number",
+    "value": 6,
+    "description": "character animation, 4 to 8 allowed"
+  },
+  "z.base": {
+    "type": "number",
+    "value": 0,
+    "description": ""
+  },
+  "z.sticky": {
+    "type": "number",
+    "value": 10,
+    "description": ""
+  },
+  "z.fab": {
+    "type": "number",
+    "value": 20,
+    "description": ""
+  },
+  "z.sheet": {
+    "type": "number",
+    "value": 30,
+    "description": ""
+  },
+  "z.dialog": {
+    "type": "number",
+    "value": 40,
+    "description": ""
+  },
+  "z.toast": {
+    "type": "number",
+    "value": 50,
+    "description": ""
+  },
+  "component.button.height": {
+    "type": "dimension",
+    "value": "48px",
+    "description": ""
+  },
+  "component.button.height-sm": {
+    "type": "dimension",
+    "value": "40px",
+    "description": ""
+  },
+  "component.button.padding-x": {
+    "type": "dimension",
+    "value": "20px",
+    "description": ""
+  },
+  "component.answer.height": {
+    "type": "dimension",
+    "value": "56px",
+    "description": ""
+  },
+  "component.answer.gap": {
+    "type": "dimension",
+    "value": "12px",
+    "description": ""
+  },
+  "component.field.height": {
+    "type": "dimension",
+    "value": "52px",
+    "description": ""
+  },
+  "component.field.padding-x": {
+    "type": "dimension",
+    "value": "16px",
+    "description": ""
+  },
+  "component.card.padding": {
+    "type": "dimension",
+    "value": "16px",
+    "description": ""
+  },
+  "component.card.gap": {
+    "type": "dimension",
+    "value": "12px",
+    "description": ""
+  },
+  "component.chip.height": {
+    "type": "dimension",
+    "value": "36px",
+    "description": ""
+  },
+  "component.chip.padding-x": {
+    "type": "dimension",
+    "value": "12px",
+    "description": ""
+  },
+  "component.chain-cell.size": {
+    "type": "dimension",
+    "value": "16px",
+    "description": ""
+  },
+  "component.chain-cell.gap": {
+    "type": "dimension",
+    "value": "4px",
+    "description": ""
+  },
+  "component.calendar-cell.size": {
+    "type": "dimension",
+    "value": "40px",
+    "description": ""
+  },
+  "component.progress-bar.height": {
+    "type": "dimension",
+    "value": "16px",
+    "description": "4 brand pixels incl. outline"
+  },
+  "component.progress-bar.segment": {
+    "type": "dimension",
+    "value": "4px",
+    "description": "fill grows in whole 4dp segments"
+  },
+  "component.ring.size": {
+    "type": "dimension",
+    "value": "112px",
+    "description": "pixel adherence ring, 28 units of 4dp"
+  },
+  "component.ring.thickness": {
+    "type": "dimension",
+    "value": "12px",
+    "description": ""
+  },
+  "component.tab-bar.height": {
+    "type": "dimension",
+    "value": "64px",
+    "description": ""
+  },
+  "component.fab.size": {
+    "type": "dimension",
+    "value": "56px",
+    "description": ""
+  },
+  "component.sheet.handle-width": {
+    "type": "dimension",
+    "value": "32px",
+    "description": ""
+  },
+  "component.sheet.padding": {
+    "type": "dimension",
+    "value": "24px",
+    "description": ""
+  }
+}

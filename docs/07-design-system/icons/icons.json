@@ -1,0 +1,205 @@
+{
+  "$description": "Didit icons. Pixelarticons 2.4.2 (MIT, Gerrit Halfmann) + custom. 24 grid, currentColor.",
+  "icons": {
+    "today": {
+      "source": "pixelarticons/home",
+      "use": "تب امروز"
+    },
+    "questions": {
+      "source": "pixelarticons/list-box",
+      "use": "تب سؤال‌ها"
+    },
+    "collection": {
+      "source": "pixelarticons/backpack",
+      "use": "تب کلکسیون"
+    },
+    "settings": {
+      "source": "pixelarticons/settings-cog",
+      "use": "تنظیمات"
+    },
+    "add": {
+      "source": "pixelarticons/plus",
+      "use": "ساخت سؤال"
+    },
+    "yes": {
+      "source": "pixelarticons/check",
+      "use": "بله، انجام شد"
+    },
+    "close": {
+      "source": "pixelarticons/close",
+      "use": "بستن"
+    },
+    "back": {
+      "source": "pixelarticons/chevron-right",
+      "use": "برگشت (در راست‌به‌چپ رو به راست)"
+    },
+    "forward": {
+      "source": "pixelarticons/chevron-left",
+      "use": "بعدی، ورود به جزئیات"
+    },
+    "expand": {
+      "source": "pixelarticons/chevron-down",
+      "use": "باز کردن"
+    },
+    "reminder": {
+      "source": "pixelarticons/bell",
+      "use": "یادآوری"
+    },
+    "reminder-off": {
+      "source": "pixelarticons/bell-off",
+      "use": "یادآوری خاموش"
+    },
+    "calendar": {
+      "source": "pixelarticons/calendar",
+      "use": "تقویم"
+    },
+    "time": {
+      "source": "pixelarticons/clock",
+      "use": "ساعت"
+    },
+    "alarm": {
+      "source": "pixelarticons/alarm-clock",
+      "use": "آلارم و یادآوری دقیق"
+    },
+    "streak": {
+      "source": "pixelarticons/fire",
+      "use": "زنجیره"
+    },
+    "freeze": {
+      "source": "pixelarticons/snowflake",
+      "use": "فریز"
+    },
+    "trophy": {
+      "source": "pixelarticons/trophy",
+      "use": "کارنامه، بهترین زنجیره"
+    },
+    "level": {
+      "source": "pixelarticons/crown",
+      "use": "سطح"
+    },
+    "xp": {
+      "source": "pixelarticons/zap",
+      "use": "امتیاز تجربه"
+    },
+    "goal": {
+      "source": "pixelarticons/target",
+      "use": "هدف بعدی"
+    },
+    "why": {
+      "source": "pixelarticons/note",
+      "use": "«چرا برات مهمه؟»"
+    },
+    "share": {
+      "source": "pixelarticons/share",
+      "use": "اشتراک"
+    },
+    "edit": {
+      "source": "pixelarticons/pencil",
+      "use": "ویرایش"
+    },
+    "archive": {
+      "source": "pixelarticons/archive",
+      "use": "بایگانی"
+    },
+    "delete": {
+      "source": "pixelarticons/trash",
+      "use": "حذف"
+    },
+    "info": {
+      "source": "pixelarticons/info-box",
+      "use": "توضیح"
+    },
+    "warning": {
+      "source": "pixelarticons/warning-diamond",
+      "use": "هشدار ملایم"
+    },
+    "help": {
+      "source": "pixelarticons/circle-question",
+      "use": "راهنما"
+    },
+    "sync": {
+      "source": "pixelarticons/refresh",
+      "use": "همگام‌سازی"
+    },
+    "cloud": {
+      "source": "pixelarticons/cloud",
+      "use": "پشتیبان"
+    },
+    "lock": {
+      "source": "pixelarticons/lock",
+      "use": "قفل (کرکتر و وسیله)"
+    },
+    "account": {
+      "source": "pixelarticons/user",
+      "use": "حساب"
+    },
+    "companions": {
+      "source": "pixelarticons/users",
+      "use": "همراهان"
+    },
+    "show": {
+      "source": "pixelarticons/eye",
+      "use": "نمایش"
+    },
+    "hide": {
+      "source": "pixelarticons/eye-off",
+      "use": "پنهان کردن"
+    },
+    "battery": {
+      "source": "pixelarticons/battery-low",
+      "use": "راهنمای باتری"
+    },
+    "phone": {
+      "source": "pixelarticons/phone",
+      "use": "شماره موبایل"
+    },
+    "password": {
+      "source": "pixelarticons/key",
+      "use": "رمز"
+    },
+    "theme-dark": {
+      "source": "pixelarticons/moon",
+      "use": "تم تیره"
+    },
+    "theme-light": {
+      "source": "pixelarticons/sun",
+      "use": "تم روشن"
+    },
+    "celebrate": {
+      "source": "pixelarticons/sparkles",
+      "use": "لحظه‌ی جشن"
+    },
+    "gift": {
+      "source": "pixelarticons/gift",
+      "use": "باز شدن وسیله"
+    },
+    "chart": {
+      "source": "pixelarticons/chart-bar-big",
+      "use": "خلاصه‌ی هفتگی"
+    },
+    "more": {
+      "source": "pixelarticons/more-vertical",
+      "use": "گزینه‌های بیشتر"
+    },
+    "undo": {
+      "source": "pixelarticons/undo",
+      "use": "برگردوندن جواب"
+    },
+    "logout": {
+      "source": "pixelarticons/logout",
+      "use": "خروج"
+    },
+    "language": {
+      "source": "pixelarticons/languages",
+      "use": "زبان"
+    },
+    "medal": {
+      "source": "didit (custom)",
+      "use": "مدال"
+    },
+    "offline": {
+      "source": "didit (custom)",
+      "use": "آفلاین"
+    }
+  }
+}
