@@ -6,7 +6,7 @@
 
 ```bash
 pip install markdown
-python3 tools/docs-site/build.py --hub-url https://claude.ai/artifact/UKKarSEFcVJJfPSsx2p6c8
+python3 tools/docs-site/build.py --hub-url https://claude.ai/artifact/F2sPDzLa4rNtELc2TcVoNi
 ```
 
 خروجی در `build/docs-site/` ساخته می‌شه (در git نیست):
@@ -22,7 +22,7 @@ python3 tools/docs-site/build.py --hub-url https://claude.ai/artifact/UKKarSEFcV
 
 | صفحه | لینک | منبع |
 |---|---|---|
-| مجموعه‌ی اسناد | https://claude.ai/artifact/UKKarSEFcVJJfPSsx2p6c8 | `build/docs-site/index.html` + همه‌ی صفحه‌ها و `docs.css` |
+| مجموعه‌ی اسناد | https://claude.ai/artifact/F2sPDzLa4rNtELc2TcVoNi | `build/docs-site/index.html` + همه‌ی صفحه‌ها و `docs.css` |
 | استراتژی (لینک قدیمی) | https://claude.ai/artifact/6JyCzwp5pP84ZGhKE1CDU5 | `build/docs-site/standalone/strategy.html` |
 | راهنمای هویت بصری (صفحه‌ی تعاملی جدا) | https://claude.ai/artifact/XXBDLh77GewD7nCdh1o24y | دستی ساخته شده |
 
